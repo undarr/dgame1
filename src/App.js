@@ -63,24 +63,8 @@ function App() {
   },[vshowspeed])
 
   useEffect(() => {
-    localStorage.setItem('visited',JSON.stringify(visited));
-  },[visited])
-
-  useEffect(() => {
-    localStorage.setItem('bagitem',JSON.stringify(bagitem));
-  },[bagitem])
-
-  useEffect(() => {
-    localStorage.setItem('cprog',JSON.stringify(cprog));
-  },[cprog])
-
-  useEffect(() => {
     localStorage.setItem('qnpc',JSON.stringify(qnpc));
   },[qnpc])
-
-  useEffect(() => {
-    localStorage.setItem('cpath',JSON.stringify(vcpath.current));
-  },[vcpath])
 
   function startnewgame() {
     songoinggame(true);
@@ -95,6 +79,10 @@ function App() {
     vtodisctext.current="";
     sshowprogbut(false);
     svisited([false,false,false,false,false]);
+    localStorage.setItem('visited',JSON.stringify(visited));
+    localStorage.setItem('bagitem',JSON.stringify(bagitem));
+    localStorage.setItem('cprog',JSON.stringify(cprog));
+    localStorage.setItem('cpath',JSON.stringify(vcpath.current));
   }
   
   function startingmenu(n) {
@@ -154,23 +142,23 @@ function App() {
     "但係後來出咗件事, 搞到我覺得自己返轉頭有啲唔負責任...", "不過件事都有啲恐怖, 我都唔係幾想再提, 你哋自己睇啦...", "*呀P畀咗一張日記紙你, 請查看背包...",
     "所以我一直都唔清楚應唔應該返轉頭, 但係我知呀U一直都想翻返轉頭,  所以我一開始都係聽佢指示幫佢...", "但係慢慢我習慣咗而家嘅生活, 我都慢慢開始move on...",
     "之後我就識咗你哋組爸, 佢當時創立Stack Undarflow真係好單純教啲Year 1做數.", "嗰時我好欣賞組爸, 啲event我都成日幫佢手, 我就寧願留低幫手, 就冇咁想翻去, 你哋望吓...",
-    "*呀P畀咗幾幅相你睇...", "直到有日我喺度開始拍拖, 我就決定咗留低, 唔再翻去...", "但係之後我同組爸上CSA莊就出咗件事, 呀U先開始接任Stack Undarflow...",
+    "*呀P畀咗幾幅相你睇...", "直到有日我喺度開始拍拖, 我就決定咗留低, 唔再翻去...", "但係之後組爸上CSA莊就出咗件事, 呀U先開始接任Stack Undarflow...",
     "而嗰時呀U又好似因為我唔想返翻去, 就同我反咗面, 所以我之後都冇乜點再搵佢...", "其實我都有諗過自己有冇做錯嘢...",
     "我淨係知道出咗事之後, Stack Undarflow 唔再係以前咁單純...", "但係Stack Undarflow而家係點我都唔知, 可能你哋都要問下其他人研究吓... 加油啦...", ""
   ],
 
-  ["咦, 你過嚟搵我做咩呀?", "呀呢份minutes係呀, 當時CSA踢人出莊呢壇嘢...", "其實我知道呢件事對呀U好重要, 因為佢好需要用CSA嘅實驗房.",
-    "2021年尾我哋出咗事之後, 我哋就借咗CSA喺InnoWing嘅一間實驗房做研究,", "後來CSA起InnoWing註冊咗之後攞返間房, 我哋攞唔翻間房入邊啲嘢, 呀U就叫我上莊.",
+  ["咦, 你過嚟搵我做咩呀?", "呀呢份minutes... 當時CSA踢人出莊呢壇嘢...", "其實我知道呢件事對呀U好重要, 因為佢好需要用CSA嘅實驗房.",
+    "2021年尾我哋出咗事之後, 我哋就借咗CSA喺InnoWing嘅一間實驗房想整啲嘢返轉頭,", "後來CSA起InnoWing註冊咗之後攞返間房, 我哋攞唔翻間房入邊啲嘢, 呀U就叫我上莊.",
     "不過我上咗莊先發現, 得3C先可以入去間實驗房, 不過呀U就因為組爸係IV, 就用到間房...", "所以當時踢人落莊呢壇嘢, 搞到呀U再入唔翻CSA嘅實驗房, 佢就好嬲好嬲...",
     "嗰時佢有鬧我點解搞到踢人落莊咁大鑊, 但係我當時係Sports Sec都冇咩話事權...", "同埋當時Superpass佢唔見人, 之後開會佢又去咗科大唔知研究咩, 睇唔到我訊息...",
     "我都冇咩合理由說服CSA唔踢人.", "其實我一直都有啲內疚, 我當初係應承咗呀U一齊返去...", "但係後來我適應咗呢度嘅生活, 後來仲拍埋拖... 我先決定move on, 接受現況...",
     "我見呀U一直想返去咁辛苦, 都勸過佢試吓move on...", "但係佢性格好頑強, 佢失敗完係唔會屈服, 你哋望吓Stack Undarflow 爆到咁就知...",
-    "我以為佢Phase 1.0完咗就真係會move on, 但係竟然仲有Phase 2.0...", "所以Stack Undarflow嘅結局係點而家冇人知, 大家再睇吓點啦...",""],
+    "我以為Phase 1.0完咗佢就真係會move on, 但係佢竟然仲搞Phase 2.0...", "所以Stack Undarflow嘅結局係點而家冇人知, 大家再睇吓點啦...",""],
      ["咦, 你過嚟搵我做咩呀?", "吓... 呢個我唔知咩嚟㗎喎...", ""]],
 
   [["咦, 你過嚟搵我做咩呀?", "唉Stack Undarflow 嘅真相... 真係講到悶...", "大家都知㗎啦... 咪你哋嘅組爸Undar當年追呀組媽追唔到...", "追唔到就走咗去沉船, 就起咗個Stack Undarflow 出嚟啦...",
     "佢話咩想透過教啲Year 1學生, 搵返當年教組媽嘅感覺喎...", "呢個故事真係聽到悶, 不過可能你都未知組媽係邊個...", "我都唔好意思咁直接啦, 我畀啲線索你哋, 你哋就估吓組媽嘅IG, 估完就同我講啦~",
-    "@ 13 1 14 4 25 6 21 14 7 _ 0 H A H", "係啦, Stack Undarflow嘅組媽就係@mandyfung_0818嘅Mandy啦...", "咁我又可以講多少少嘅...", "2021年9月嘅時候, 我就係一場Year 2 CS lecture識咗Undar,",
+    "@ 13 1 14 4 25 6 21 14 7 _ 0 H A H", "係啦, Stack Undarflow嘅組媽就係@mandyfung_0818嘅Mandy啦...", "咁我又可以講多少少嘅...", "2021年9月嘅時候, 我就喺一場Year 2 CS lecture識咗Undar,",
     "當年佢Year 1上Year 2嘅Lecture, 我已經知佢讀書好痴線...", "後來佢介紹咗佢個Omate, Pilot畀我識... 當時我哋三個係好close好firm嘅frd,",
     "咁呀Undar起OCamp隔離組識咗Mandy, 就想追佢... 然後就不斷教佢讀書, 咁我同呀Pilot一直都幫緊佢做軍師...", "但係佢最後喺12月表白失敗... 失敗咗之後佢就搵我同Pilot嚟呢度隊酒去呻...",
     "不過咁啱前一日呀Pilot踢波拗柴要留院, 就得返我一個陪佢...", "佢嗰日喺度真係喊到痴線㗎, 我畀條片你睇喇...", "*Shows video about Undar cry (Undar: 哎呀Zepa我真係好唔開心呀, 點解Mandy會唔鍾意我㗎... 點解呀...)",
@@ -191,14 +179,14 @@ function App() {
     "可能自己嗰晚真係醉醉哋, 唔知啦...", ""
   ], ["咦, 你過嚟搵我做咩呀?", "吓... 呢個我唔知咩嚟㗎喎...", ""]],
   
-  [["咦, 你過嚟搵我做咩呀?", "Stack Undarflow 嘅真相... 咁我而家係Stack Undarflow 内部團隊之一, 我的確係知多少少嘅...", "咁其實Stack Undarflow就一直都好好嘅, 但係你哋組爸Undar就一直都好古怪.",
+  [["咦, 你過嚟搵我做咩呀?", "Stack Undarflow 嘅真相... 咁我而家係Stack Undarflow 内部團隊之一, 我的確係知多少少嘅...", "咁其實Stack Undarflow就一直都好好哋嘅, 但係你哋組爸Undar就一直都好古怪.",
     "我第一次識Undar嘅時候係2021年嘅11月, 我當時仲係中六...", "嗰時我同我個中同Glisson去咗數碼港一場Hackathon比賽", "比賽之後我哋就去咗香港仔食飯, 再去香港仔海傍散步...",
     "嗰晚我就見到Undar喺一架遊艇上, 而架遊艇唔知做咩有個粉紫色嘅發光門...", "成件事好科幻, 我都唔知點形容好, 你哋自己望下...", "*呀A畀咗一幅相你, 請查看背包",
     "嗰時Undar仲鬼鬼鼠鼠咁, 咁過咗陣, 佢就去返個紫色門好似撳啲掣咁...", "然後佢就穿過個紫色門, 棟紫色門就突然冇咗... 咁我都幾肯定嗰棟門係穿梭門嚟嘅...",
     "而我同Glisson不嬲都好鍾意科幻小說, 我哋估唔到現實世界真係會見到有穿梭門...", "我哋一直都好想搵返嗰個人, 而去到2022年我入咗港大, 呀Undar就啱啱創立咗Stack Undarflow.",
     "嗰時我不斷去Stack Undarflow啲活動問Undar穿梭門嘅嘢,", "但係我chok咗佢成兩個學期佢都賴死唔認, 不斷話我認錯人咁...", "直到2023年5月1號, 我見到佢古古怪怪好急忙咁離開InnoWing,",
-    "嗰日我原本想問佢啲ENGG1340, 但係佢個樣實好慌忙咁話趕住要去科大唔知做咩就直接走咗去...", "我都知佢有啲嘢, 咁第二日5月2號, 我又喺InnoWing撞到佢, 佢當時prep緊嗰晚CSA嘅Superpass...",
-    "我就問佢係唔係係InnoWing研究緊啲嘢, 佢又賴死唔認...", "係去到我逼去試下去啲實驗房拍卡, 佢就開到一間實驗房, 裏面有部穿梭機...",
+    "嗰日我原本想問佢啲ENGG1340, 但係佢個樣實好慌忙咁話趕住要去科大唔知做咩就直接走咗去...", "我都知佢暗地裏收埋緊一啲嘢, 咁第二日5月2號, 我又喺InnoWing撞到佢, 佢當時prep緊嗰晚CSA嘅Superpass...",
+    "我就問佢係唔係喺InnoWing研究緊啲嘢, 佢又賴死唔認...", "係去到我逼佢試下去啲實驗房拍學生證, 佢就開到一間實驗房, 裏面有部穿梭機...",
     "我都知佢呃咗我好耐, 但係唔知點解佢見到部穿梭機會好驚訝, 好似完全唔知有件咁嘅事咁...", "咁之後佢就開咗個穿梭機, 又整咗個粉紫色嘅穿梭門, 然後就走咗去棟門嘅第二邊...",
     "我原本都諗住跟, 但係又唔係幾夠膽... 但係都幾好彩冇跟到...", "因為唔夠兩分鐘嚿嘢唔知做咩事突然間爆炸... 真係好彩自己見到唔對路即刻走, 如果唔係我都炸埋一份...",
     "不過我走咗之後就入唔返個實驗房, 而呀Undar又唔知穿梭咗去邊...", "去到過多兩日5月4號, 我先再撞返佢... 我同佢講部機爆咗炸, 問佢穿梭咗去邊, 佢又唔知做咩扮到懵懵哋咁...",
@@ -294,6 +282,10 @@ function App() {
       if (vframe.current===4 && cprog===30) {addbagitem("EGM會議紀錄");}
       if (vframe.current===5 && cprog===14) {addbagitem("2021年U報");}
     }
+    localStorage.setItem('visited',JSON.stringify(visited));
+    localStorage.setItem('bagitem',JSON.stringify(bagitem));
+    localStorage.setItem('cprog',JSON.stringify(cprog));
+    localStorage.setItem('cpath',JSON.stringify(vcpath.current));
     // 1,5~8 -> Undar task , 1,11 -> Epsitha IG, 1,25-> news 2023
     // 2,9 -> pdiary, 2,14->photos
     // 3,6 -> Mandy code, 3,7 -> Mandy IG, 3,16 -> video Mandy cry,  3,20 -> 劇本, 3,33-> 文件截圖
@@ -545,8 +537,8 @@ function App() {
           {!showprogbut ? <></> :
            cprog!==0 ? <>
            <button className="genbutton" style={{"bottom":"1.5vh", "right":"3vh", "width":"5vh"}} onClick={() => {progchat();}}> {">"} </button>
-           {vframe.current===1 && vcpath===0 && cprog===12 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh", "right":"11vh"}}> 查看IG </button></a> : <></>}
-           {vframe.current===3 && vcpath===0 && cprog===8 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh", "right":"11vh"}}> 查看IG </button></a> : <></>}
+           {vframe.current===1 && vcpath.current===0 && cprog===12 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh", "right":"11vh"}}> 查看IG </button></a> : <></>}
+           {vframe.current===3 && vcpath.current===0 && cprog===8 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh", "right":"11vh"}}> 查看IG </button></a> : <></>}
            </>
           : visited[frame-1] ? 
           <><button className="genbutton" style={{"bottom":"1.5vh", "right":"45vh", "width":"50vh"}} onClick={() => {vcpath.current=0; progchat();}}>我想探問Stack Undarflow嘅真相!</button>
