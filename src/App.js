@@ -539,8 +539,8 @@ function App() {
           {!showprogbut ? <></> :
            cprog!==0 ? <>
            <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {progchat();}}> {">"} </button>
-           {vframe.current===1 && vcpath.current===0 && cprog===12 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh)", "right":"11vh)"}}> 查看IG </button></a> : <></>}
-           {vframe.current===3 && vcpath.current===0 && cprog===8 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh)", "right":"11vh)"}}> 查看IG </button></a> : <></>}
+           {vframe.current===1 && vcpath.current===0 && cprog===12 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75,1.5vh)", "right":"min(5.5,11vh)"}}> 查看IG </button></a> : <></>}
+           {vframe.current===3 && vcpath.current===0 && cprog===8 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75,1.5vh)", "right":"min(5.5,11vh)"}}> 查看IG </button></a> : <></>}
            </>
           : visited[frame-1] ? 
           <><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(22.5vw,45vh)", "width":"min(25vw,50vh)"}} onClick={() => {vcpath.current=0; progchat();}}>我想探問Stack Undarflow嘅真相!</button>
