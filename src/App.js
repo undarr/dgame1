@@ -104,8 +104,8 @@ function App() {
       {ongoinggame ? <button className="startbutton" onClick={() => {sframe(getlocalstorage('frame',-1));}}><div>繼續遊戲</div></button>
       : <button className="startbutton disabled">繼續遊戲</button>
       }
-      {ongoinggame ? <button className="startbutton" onClick={() => {startnewgame();}}><div style={{"fontSize":"5vh"}}>開始新遊戲</div>
-      <div style={{"fontSize":"2vh"}}>⚠ 警告，開始新遊戲將會清除目前遊戲的進度 ⚠</div></button>
+      {ongoinggame ? <button className="startbutton" onClick={() => {startnewgame();}}><div style={{"fontSize":"min(2.5vw,5vh)"}}>開始新遊戲</div>
+      <div style={{"fontSize":"min(1vw,2vh)"}}>⚠ 警告，開始新遊戲將會清除目前遊戲的進度 ⚠</div></button>
       : <button className="startbutton" onClick={() => {startnewgame();}}>開始新遊戲</button>}
       <button className="startbutton" onClick={() => {sstartingframe(1);}}>返回</button>
       <br></br>
@@ -299,8 +299,9 @@ function App() {
 
   function startingchat() {
     noclickf();
+    scprog(-1);
     sshowprogbut(false);
-    setTimeout(() => {scprog(-1); progchat(); sspeaking(["","呀U: ","呀P: ","呀Z: ","呀A: ","呀L: "][vframe.current])},1250)
+    setTimeout(() => {progchat(); sspeaking(["","呀U: ","呀P: ","呀Z: ","呀A: ","呀L: "][vframe.current])},1250)
     setTimeout(() => {sshowprogbut(true);},2500)
   }
 
@@ -343,8 +344,8 @@ function App() {
         {checkbag2===5 ? <><div id="bgnote"><div className="fullop">角色介紹: (3/3)<br></br>
           Lewis - 2022年入讀港大修讀工程, 在2023年揀選土木工程為主修, 揀選計算機科學為副修. 冒險精神高, 喜歡遊山玩水, 2022年透過Stack Undarflow舉辦嘅Interest Group認識Undar, 亦後來被邀成為Stack Undarflow Phase 2 內部團隊成員之一.
             </div></div></> : <></>}
-        {checkbag2!==1 ? <button className="genbutton" style={{"zIndex":100, "bottom":"15vh", "left":"25vh", "width":"5vh"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
-        {checkbag2!==5 ? <button className="genbutton" style={{"zIndex":100, "bottom":"15vh", "right":"25vh", "width":"5vh"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
+        {checkbag2!==1 ? <button className="genbutton" style={{"zIndex":100, "bottom":"min(7.5vw,15vh)", "left":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
+        {checkbag2!==5 ? <button className="genbutton" style={{"zIndex":100, "bottom":"min(7.5vw,15vh)", "right":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
       </>
       )
     }
@@ -399,8 +400,8 @@ function App() {
           平常心面對sem2 :')<br></br>
           劇終
           </div></div></> : <></>}
-        {checkbag2!==1 ? <button className="genbutton" style={{"zIndex":100, "bottom":"15vh", "left":"25vh", "width":"5vh"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
-        {checkbag2!==7 ? <button className="genbutton" style={{"zIndex":100, "bottom":"15vh", "right":"25vh", "width":"5vh"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
+        {checkbag2!==1 ? <button className="genbutton" style={{"zIndex":100, "bottom":"min(7.5vw,15vh)", "left":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
+        {checkbag2!==7 ? <button className="genbutton" style={{"zIndex":100, "bottom":"min(7.5vw,15vh)", "right":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
       </>
       )
     }
@@ -432,8 +433,8 @@ function App() {
         {checkbag2===7 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (7/7)<br></br>
         
         </div></div></> : <></>}
-        {checkbag2!==1 ? <button className="genbutton" style={{"zIndex":30, "bottom":"15vh", "left":"25vh", "width":"5vh"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
-        {checkbag2!==7 ? <button className="genbutton" style={{"zIndex":30, "bottom":"15vh", "right":"25vh", "width":"5vh"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
+        {checkbag2!==1 ? <button className="genbutton" style={{"zIndex":30, "bottom":"min(7.5vw,15vh)", "left":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
+        {checkbag2!==7 ? <button className="genbutton" style={{"zIndex":30, "bottom":"min(7.5vw,15vh)", "right":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
       </>
       )
     }
@@ -445,8 +446,8 @@ function App() {
     </TransformComponent>
     </TransformWrapper>
     </div>
-    {checkbag2!==1 && n==="文件截圖" ? <button className="genbutton" style={{"zIndex":30, "bottom":"15vh", "left":"75vh", "width":"5vh"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
-    {checkbag2!==2 && n==="文件截圖" ? <button className="genbutton" style={{"zIndex":30, "bottom":"15vh", "right":"80vh", "width":"5vh"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
+    {checkbag2!==1 && n==="文件截圖" ? <button className="genbutton" style={{"zIndex":30, "bottom":"min(7.5vw,15vh)", "left":"min(37.5vw,75vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
+    {checkbag2!==2 && n==="文件截圖" ? <button className="genbutton" style={{"zIndex":30, "bottom":"min(7.5vw,15vh)", "right":"min(40vw,80vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
     </>)
   }
 
@@ -461,7 +462,8 @@ function App() {
 
   return (
     <div className="App">
-      <audio id="audio_tag" src={bgm} />
+      <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans" rel="stylesheet"></link>
+      <audio id="audio_tag" src={bgm}/>
       <div className="bgfull" style={{"backgroundImage":"url(./img/bg.png)"}}></div>
       <div className="header">
       <h1 className="header-left">U記 - Phase 1.0 之迷</h1>
@@ -513,37 +515,37 @@ function App() {
       <FadeInOut show={frame===-1} duration={1000}>
       <div className="frame">
         <button id="map" style={{"backgroundImage":"url(./img/map.png)"}}></button>
-        <button className="genbutton" style={{"top":"70vh", "right":"5vh"}} onClick={() => {scheckbag(1); noclickf(520);}}>查看背包</button>
-        <button className="ppbut" style={{"top":"10vh", "right":"75vh", "backgroundImage":"url(./img/u.png)"}} onMouseEnter={() => {smapinfoppl("(同呀U傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(1); startingchat();}}></button>
-        <button className="ppbut" style={{"top":"60vh", "right":"119vh", "backgroundImage":"url(./img/p.png)"}} onMouseEnter={() => {smapinfoppl("(同呀P傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(2); startingchat();}}></button>
-        <button className="ppbut" style={{"top":"46vh", "right":"146vh", "backgroundImage":"url(./img/z.png)"}} onMouseEnter={() => {smapinfoppl("(同呀Z傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(3); startingchat();}}></button>
-        <button className="ppbut" style={{"top":"62vh", "right":"51vh", "backgroundImage":"url(./img/a.png)"}} onMouseEnter={() => {smapinfoppl("(同呀A傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(4); startingchat();}}></button>
-        <button className="ppbut" style={{"top":"20vh", "right":"45vh", "backgroundImage":"url(./img/l.png)"}} onMouseEnter={() => {smapinfoppl("(同呀L傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(5); startingchat();}}></button>
-        <img className="dir" style={{"top":"40vh", "right":"2vh"}} src={"./img/east.png"} alt="" />
-        <img className="dir" style={{"top":"40vh", "left":"2vh"}} src={"./img/west.png"} alt="" />
-        <img className="dir" style={{"top":"2vh", "left":"80vh"}} src={"./img/north.png"} alt="" />
-        <img className="dir" style={{"bottom":"2vh", "left":"80vh"}} src={"./img/south.png"} alt="" />
+        <button className="genbutton" style={{"top":"min(35vw,70vh)", "right":"min(2.5vw,5vh)"}} onClick={() => {scheckbag(1); noclickf(520);}}>查看背包</button>
+        <button className="ppbut" style={{"top":"min(5vw,10vh)", "right":"min(37.5vw,75vh)", "backgroundImage":"url(./img/u.png)"}} onMouseEnter={() => {smapinfoppl("(同呀U傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(1); startingchat();}}></button>
+        <button className="ppbut" style={{"top":"min(30vw,60vh)", "right":"min(59.5vw,119vh)", "backgroundImage":"url(./img/p.png)"}} onMouseEnter={() => {smapinfoppl("(同呀P傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(2); startingchat();}}></button>
+        <button className="ppbut" style={{"top":"min(23vw,46vh)", "right":"min(73vw,146vh)", "backgroundImage":"url(./img/z.png)"}} onMouseEnter={() => {smapinfoppl("(同呀Z傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(3); startingchat();}}></button>
+        <button className="ppbut" style={{"top":"min(31vw,62vh)", "right":"min(25.5vw,51vh)", "backgroundImage":"url(./img/a.png)"}} onMouseEnter={() => {smapinfoppl("(同呀A傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(4); startingchat();}}></button>
+        <button className="ppbut" style={{"top":"min(10vw,20vh)", "right":"min(22.5vw,45vh)", "backgroundImage":"url(./img/l.png)"}} onMouseEnter={() => {smapinfoppl("(同呀L傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(5); startingchat();}}></button>
+        <img className="dir" style={{"top":"min(20vw,40vh)", "right":"min(1vw,2vh)"}} src={"./img/east.png"} alt="" />
+        <img className="dir" style={{"top":"min(20vw,40vh)", "left":"min(1vw,2vh)"}} src={"./img/west.png"} alt="" />
+        <img className="dir" style={{"top":"min(20vw,2vh)", "left":"min(40vw,80vh)"}} src={"./img/north.png"} alt="" />
+        <img className="dir" style={{"bottom":"min(1vw,2vh)", "left":"min(40vw,80vh)"}} src={"./img/south.png"} alt="" />
         <span className="mapinfo">地圖: (灣仔海濱公園)<br/>請點擊你想談天的對象<br/>{mapinfoppl}</span>
 
       </div>
       </FadeInOut>
       <FadeInOut show={frame>=1} duration={1000}>
       <div className="frame">
-        <button className="genbutton" style={{"top":"55vh", "right":"22vh"}} onClick={() => {vtodisctext.current=""; sframe(-1); scprog(-1); sdisctext(""); sshowprogbut(false); noclickf();}}>{"<"}返回地圖</button>
-        <button className="genbutton" style={{"top":"55vh", "right":"0vh"}} onClick={() => {scheckbag(1); noclickf(520);}}>查看背包</button>
-        <div className="circle" style={{"bottom":"3vh", "left":"5vh", "width":"30vh", "height":"30vh", "backgroundImage":"url(./img/"+["blankppl","u","p","z","a","l"][Math.max(0,frame)]+".png)"}}></div>
+        <button className="genbutton" style={{"top":"min(29vw,58vh)", "right":"min(11vw,22vh)"}} onClick={() => {vtodisctext.current=""; sframe(-1); scprog(-1); vcpath.current=0; sdisctext(""); sshowprogbut(false); noclickf();}}>{"<"}返回地圖</button>
+        <button className="genbutton" style={{"top":"min(29vw,58vh)", "right":"0vh"}} onClick={() => {scheckbag(1); noclickf(520);}}>查看背包</button>
+        <div className="circle" style={{"top":"min(25vw,50vh)", "left":"min(2.5vw,5vh)", "width":"min(15vw,30vh)", "height":"min(15vw,30vh)", "backgroundImage":"url(./img/"+["blankppl","u","p","z","a","l"][Math.max(0,frame)]+".png)"}}></div>
         <div className="tbub">
           {frame>0 && cprog!==-1 ? speaking+disctext : ""}
           {!showprogbut ? <></> :
            cprog!==0 ? <>
-           <button className="genbutton" style={{"bottom":"1.5vh", "right":"3vh", "width":"5vh"}} onClick={() => {progchat();}}> {">"} </button>
-           {vframe.current===1 && vcpath.current===0 && cprog===12 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh", "right":"11vh"}}> 查看IG </button></a> : <></>}
-           {vframe.current===3 && vcpath.current===0 && cprog===8 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh", "right":"11vh"}}> 查看IG </button></a> : <></>}
+           <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {progchat();}}> {">"} </button>
+           {vframe.current===1 && vcpath.current===0 && cprog===12 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh)", "right":"11vh)"}}> 查看IG </button></a> : <></>}
+           {vframe.current===3 && vcpath.current===0 && cprog===8 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"1.5vh)", "right":"11vh)"}}> 查看IG </button></a> : <></>}
            </>
           : visited[frame-1] ? 
-          <><button className="genbutton" style={{"bottom":"1.5vh", "right":"45vh", "width":"50vh"}} onClick={() => {vcpath.current=0; progchat();}}>我想探問Stack Undarflow嘅真相!</button>
-          <button className="genbutton" style={{"bottom":"1.5vh", "right":"3vh", "width":"40vh"}} onClick={() => {sqnpc(true); scheckbag(1);}}>關於呢樣嘢, 我想問多少少...</button></>
-          : <button className="genbutton" style={{"bottom":"1.5vh", "right":"3vh", "width":"50vh"}} onClick={() => {vcpath.current=0; progchat();}}>我想探問Stack Undarflow嘅真相!</button>}
+          <><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(22.5vw,45vh)", "width":"min(25vw,50vh)"}} onClick={() => {vcpath.current=0; progchat();}}>我想探問Stack Undarflow嘅真相!</button>
+          <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(20vw,40vh)"}} onClick={() => {sqnpc(true); scheckbag(1);}}>關於呢樣嘢, 我想問多少少...</button></>
+          : <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(25vw,50vh)"}} onClick={() => {vcpath.current=0; progchat();}}>我想探問Stack Undarflow嘅真相!</button>}
         </div>
       </div>
       </FadeInOut>

@@ -10,6 +10,7 @@
   padding: 0.5em 1.5em;
   width: 100%;
   height: 7vh;
+  font-size: 2vh;
   color: #000;
   background-color: #B6FF00;
   z-index: 200;
@@ -25,6 +26,7 @@ footer {
   color: #000;
   background-color: #B6FF00;
   z-index: 200;
+  font-size: 1.8vh;
 }
 
 .header-left {
@@ -54,9 +56,9 @@ footer {
   margin: 0;
   position: absolute;
   top: 10vh;
-  left: 18vh;
-  width: 175vh;
-  height: 80vh;
+  left: min(9vw,18vh);
+  width: min(88vw,175vh);
+  height: min(40vw,80vh);
 }
 
 .hide {
@@ -78,7 +80,7 @@ footer {
   position: absolute;
   top: 5vh;
   left: 0vh;
-  width: 100vw;
+  width: 100%;
   height: 90vh;
   z-index: -100;
   background-position: center;
@@ -87,7 +89,7 @@ footer {
 }
 
 button {
-  font-family: monospace, sans-serif;
+  font-family: "Shantell Sans", sans-serif;
   font-weight: bolder;
   position: relative;
   width: 100%;
@@ -96,6 +98,8 @@ button {
   background-repeat: no-repeat;
   border: none;
   border-radius: 1vh;
+  border-color: #000;
+  color: #000;
 }
 
 button:hover {
@@ -114,9 +118,9 @@ button:focus {
   z-index: 3;
   position: absolute;
   text-align: center;
-  font-size: 2.5vh;
-  width : 20vh;
-  height: 7vh;
+  font-size: min(1.2vw,2.5vh);
+  width : min(10vw,20vh);
+  height: min(3.5vw,7vh);
   padding: 0.2vh 0;
   border-style: solid;
   border-color:#000;
@@ -126,8 +130,8 @@ button:focus {
 .ppbut {
   z-index: 3;
   position: absolute;
-  width: 15vh;
-  height: 15vh;
+  width: min(7.5vw,15vh);
+  height: min(7.5vw,15vh);
   border-style: solid;
   border-color: #ffbf00;
   border-width: 0.4vh;
@@ -139,9 +143,9 @@ button:focus {
 
 .bagbut {
   margin: 1vh;
-  width: 25vh;
-  height: 25vh;
-  font-size: 4vh;
+  width: min(12.5vw,25vh);
+  height: min(12.5vw,25vh);
+  font-size: min(2vw,4vh);
   border-style: solid;
   border-width: 0.4vh;
 }
@@ -154,25 +158,25 @@ button:focus {
 
 .bagitemdiv {
   width: 100%;
-  height: 55vh;
+  height: min(27.5vw,55vh);
   position: relative;
   margin: auto;
 }
 
 .bagitem {
-  height: 55vh;
+  height: min(27.5vw,55vh);
   position: relative;
   margin: auto;
 }
 
 #bgnote {
   font-family: monospace, sans-serif;
-  font-size: 3.8vh;
+  font-size: min(1.9vw,3.8vh);
 
   position: relative;
   left: 10%;
   width : 80%;
-  height: 50vh;
+  height: min(25vw,50vh);
   padding : 0.4em;
   border-style: solid;
   margin-top: 1.5%;
@@ -195,14 +199,14 @@ button:focus {
 .tbub {
   font-family: monospace, sans-serif;
   text-align: left;
-  font-size: 3.5vh;
+  font-size: min(1.75vw,3.5vh);
   font-weight: bold;
 
+  top: min(33vw,66vh);
   position: absolute;
-  bottom: 0vh;
   width : 100%;
-  height: 16vh;
-  padding : 1.5vh 1vh 1vh 37vh;
+  height: min(8vw,16vh);
+  padding : 1.5vh 1vh 1vh min(18.5vw,37vh);
   border-style: solid;
   border-width: 0.4vh;
   border-radius: 25px;
@@ -211,15 +215,15 @@ button:focus {
 }
 
 #starttitle {
-  font-size: 15vh;
-  font-family: cursive, sans-serif;
+  font-size: min(7.5vw,15vh);
+  font-family: "Shantell Sans", sans-serif;
   font-style: italic;
   color:#fff;
 }
 
 #startdes {
-  font-size: 5vh;
-  font-family: cursive, sans-serif;
+  font-size: min(2.5vw,5vh);
+  font-family: "Shantell Sans", sans-serif;
   font-style: italic;
   color:#fff;
 }
@@ -230,10 +234,10 @@ button:focus {
 
 .startbutton {
   text-align: center;
-  font-size: 6vh;
+  font-size: min(3vw,6vh);
   width : 50%;
-  height: 12vh;
-  font-family: cursive, sans-serif;
+  height: min(6vw,12vh);
+  font-family: "Shantell Sans", sans-serif;
   margin: 2vh 0.4vh 0vh 0.4vh;
   padding: 0.2vh 0;
   border-style: solid;
@@ -244,10 +248,10 @@ button:focus {
 
 .startbutton2 {
   text-align: center;
-  font-size: 4vh;
+  font-size: min(2vw,4vh);
   font-family: cursive, sans-serif;
   width : 15%;
-  height: 8vh;
+  height: min(4vw,8vh);
   margin: 1vh 0.4vh 0vh 0.4vh;
   padding: 0.2vh 0;
   border-style: solid;
@@ -258,10 +262,10 @@ button:focus {
 
 .startbutton3 {
   text-align: center;
-  font-size: 4vh;
+  font-size: min(2vw,4vh);
   font-family: cursive, sans-serif;
   width : 15%;
-  height: 8vh;
+  height: min(4vw,8vh);
   margin: 1vh 0.4vh 0vh 0.4vh;
   padding: 0.2vh 0;
   border-style: solid;
@@ -275,11 +279,10 @@ button:focus {
   z-index: 100;
   margin: 0;
   position: absolute;
-  font-size: 3vh;
   top: 10vh;
-  right: 5vh;
-  width : 10vh;
-  height: 10vh;
+  right: min(2.5vw,5vh);
+  width : min(5vw,10vh);
+  height: min(5vw,10vh);
   border-style: solid;
   border-color:#888;
   border-width: 0.4vh;
@@ -289,16 +292,16 @@ button:focus {
 .dir {
   z-index: 5;
   position: absolute;
-  height: 5vh;
+  height: min(2.5vw,5vh);
 }
 
 .mapinfo {
   z-index: 5;
   position: absolute;
-  top: 2vh;
-  left:2vh;
+  top: min(1vw,2vh);
+  left: min(1vw,2vh);
   color: #ff0;
-  font-size: 3vh;
+  font-size: min(1.5vw,3vh);
 }
 
 .noclickoverlay {
@@ -344,11 +347,11 @@ button:focus {
   z-index: 3;
   margin: 0;
   position: absolute;
-  font-size: 3vh;
+  font-size: min(1.5vw,3vh);
   top: 22vh;
-  right: 5vh;
-  width : 10vh;
-  height: 10vh;
+  right: min(2.5vw,5vh);
+  width : min(5vw,10vh);
+  height: min(5vw,10vh);
   border-style: solid;
   border-color:#888;
   border-width: 0.4vh;
@@ -359,11 +362,11 @@ button:focus {
   z-index: 12;
   margin: 0;
   position: absolute;
-  font-size: 3vh;
-  top: 7vh;
-  right: 5vh;
-  width : 10vh;
-  height: 10vh;
+  font-size: min(1.5vw,3vh);
+  top: min(3.5vw,7vh);
+  right: min(2.5vw,5vh);
+  width : min(5vw,10vh);
+  height: min(5vw,10vh);
   border-style: solid;
   border-color:#888;
   border-width: 0.4vh;
