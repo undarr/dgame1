@@ -33,6 +33,13 @@ function App() {
   const [bagitem, sbagitem] = useState(getlocalstorage('bagitem',["0","1","遊戲說明卡","劇本","2021年U報","2023年U報","P的日記","EGM會議紀錄","相片","文件截圖"]));
   const vcpath = useRef(getlocalstorage('cpath',0));
   const [cprog, scprog] = useState(getlocalstorage('cprog',-1));
+  const vcprog = useRef(getlocalstorage('cprog',-1));
+
+  useEffect(() => {
+    vcprog.current=cprog;
+    localStorage.setItem('cprog',JSON.stringify(cprog));
+  },[cprog])
+
   const [noclick, snoclick] = useState(false);
   const [qnpc, sqnpc] = useState(getlocalstorage('qnpc',false));
   const [muted, smuted] = useState(true);
@@ -71,7 +78,7 @@ function App() {
     sbagitem(["0","1","遊戲說明卡","","","","","","",""])
     sframe(-1);
     vcpath.current=0;
-    scprog(-1);
+    scprog(0);
     scheckbag(2);
     scheckbag2(1);
     sspeaking("");
@@ -79,9 +86,9 @@ function App() {
     vtodisctext.current="";
     sshowprogbut(false);
     svisited([false,false,false,false,false]);
-    localStorage.setItem('visited',JSON.stringify(visited));
-    localStorage.setItem('bagitem',JSON.stringify(bagitem));
-    localStorage.setItem('cprog',JSON.stringify(cprog));
+    localStorage.setItem('visited',JSON.stringify([false,false,false,false,false]));
+    localStorage.setItem('bagitem',JSON.stringify(["0","1","遊戲說明卡","","","","","","",""]));
+    localStorage.setItem('cprog',JSON.stringify(-1));
     localStorage.setItem('cpath',JSON.stringify(vcpath.current));
   }
   
@@ -163,7 +170,7 @@ function App() {
     "咁呀Undar起OCamp隔離組識咗Mandy, 就想追佢... 然後就不斷教佢讀書, 咁我同呀Pilot一直都幫緊佢做軍師...", "但係佢最後喺12月表白失敗... 失敗咗之後佢就搵我同Pilot嚟呢度隊酒去呻...",
     "不過咁啱前一日呀Pilot踢波拗柴要留院, 就得返我一個陪佢...", "佢嗰日喺度真係喊到痴線㗎, 我畀條片你睇喇...", "*Shows video about Undar cry (Undar: 哎呀Zepa我真係好唔開心呀, 點解Mandy會唔鍾意我㗎... 點解呀...)",
     "嗰晚佢己經隊酒隊到冧冧哋, 第二日仲要考試, 然後佢仲要話搭船返屋企散心...", "我都知道佢會出事, 然後果然啦, 佢呢架船上面嘔... 佢真係好彩有我陪佢...",
-    "我真係唔知點解佢咁鍾意Mandy, 佢後來仲寫埋份追女日記... 我都唔講笑, 佢真係好癲... 你自己睇下喇...", "*呀Z畀咗份劇本你, 請查看背包...",
+    "我真係唔知點解佢咁鍾意Mandy, 佢後來仲寫埋份追女劇本... 我都唔講笑, 佢真係好癲... 你自己睇下喇...", "*呀Z畀咗份劇本你, 請查看背包...",
     "係囉, 然後佢2022年9月就開始搞Stack Undarflow紀念組媽啦...", "不過2022年其實好怪...", "年頭呀Pilot第五波中咗肺炎, 然後就去咗竹篙灣隔離, 隔離完出返嚟之後就開始唔理我同Undar,",
     "姐係以前佢每個禮拜都會主動搵我踢波, 但係後來就連我搵返佢... 佢都唔肯出嚟...", "唔知佢係拗柴驚咗定咩, 但係後來係我約佢咩, 佢都唔覆機... 真係唔知咩事...",
     "當時佢都搞到我同Undar好唔開心, 但係之後去到2023年6月, 呀Undar又開始好似變到佢咁...", "唔知佢同Pilot忙緊咩變到機都唔覆咁... 聽返嚟呀Pilot就拍緊拖, 呀Undar就好似識咗個叫Christine嘅女仔, 但係又唔知真定假...",
@@ -180,7 +187,7 @@ function App() {
   ], ["咦, 你過嚟搵我做咩呀?", "吓... 呢個我唔知咩嚟㗎喎...", ""]],
   
   [["咦, 你過嚟搵我做咩呀?", "Stack Undarflow 嘅真相... 咁我而家係Stack Undarflow 内部團隊之一, 我的確係知多少少嘅...", "咁其實Stack Undarflow就一直都好好哋嘅, 但係你哋組爸Undar就一直都好古怪.",
-    "我第一次識Undar嘅時候係2021年嘅11月, 我當時仲係中六...", "嗰時我同我個中同Glisson去咗數碼港一場Hackathon比賽", "比賽之後我哋就去咗香港仔食飯, 再去香港仔海傍散步...",
+    "我第一次識Undar嘅時候係2021年嘅11月, 我當時仲係中六...", "嗰時我同我個中同Glisson去咗數碼港一場Hackathon比賽,", "比賽之後我哋就去咗香港仔食飯, 再去香港仔海傍散步...",
     "嗰晚我就見到Undar喺一架遊艇上, 而架遊艇唔知做咩有個粉紫色嘅發光門...", "成件事好科幻, 我都唔知點形容好, 你哋自己望下...", "*呀A畀咗一幅相你, 請查看背包",
     "嗰時Undar仲鬼鬼鼠鼠咁, 咁過咗陣, 佢就去返個紫色門好似撳啲掣咁...", "然後佢就穿過個紫色門, 棟紫色門就突然冇咗... 咁我都幾肯定嗰棟門係穿梭門嚟嘅...",
     "而我同Glisson不嬲都好鍾意科幻小說, 我哋估唔到現實世界真係會見到有穿梭門...", "我哋一直都好想搵返嗰個人, 而去到2022年我入咗港大, 呀Undar就啱啱創立咗Stack Undarflow.",
@@ -250,42 +257,40 @@ function App() {
     const temp=bagitem;
     for (let i=0; i<8; i++) {
       if (temp[i]===n) {return;}
-      if (temp[i]==="") {temp[i]=n; sbagitem(temp); return;}
+      if (temp[i]==="") {temp[i]=n; localStorage.setItem('bagitem',JSON.stringify(temp)); sbagitem(temp); return;}
     }
   }
 
   function progchat() {
-    console.log(vframe.current,vcpath.current,cprog+1);
+    localStorage.setItem('cpath',JSON.stringify(vcpath.current));
     sshowprogbut(false);
     scprog(cprog+1);
-    vtodisctext.current=chat.current[vframe.current][vcpath.current][cprog+1];
+    console.log(vframe.current,vcpath.current,vcprog.current);
+    vtodisctext.current=chat.current[vframe.current][vcpath.current][vcprog.current];
     const time=Math.max(1000,60*vtodisctext.current.length);
-    vshowspeed.current=Math.floor(time/chat.current[vframe.current][vcpath.current][cprog+1].length);
+    vshowspeed.current=Math.floor(time/chat.current[vframe.current][vcpath.current][vcprog.current].length);
     if (vtodisctext.current==="") {
       sdisctext("");
       sspeaking("");
       const temp=[...visited];
       temp[frame-1]=true;
       svisited(temp);
+      localStorage.setItem('visited',JSON.stringify(temp));
     }
     else {
       matchdistext();
       setTimeout(() => {sshowprogbut(true);},time+500);
     }
-    console.log(vframe.current,cprog, time, vshowspeed.current); 
+    console.log(vframe.current,vcprog.current, time, vshowspeed.current); 
     if (vcpath.current===0) {
-      if (vframe.current===1 && cprog===26) {addbagitem("2023年U報");}
-      if (vframe.current===2 && cprog===9) {addbagitem("P的日記");}
-      if (vframe.current===3 && cprog===20) {addbagitem("劇本");}
-      if (vframe.current===3 && cprog===33) {addbagitem("文件截圖");}
-      if (vframe.current===4 && cprog===7) {addbagitem("相片");}
-      if (vframe.current===4 && cprog===30) {addbagitem("EGM會議紀錄");}
-      if (vframe.current===5 && cprog===14) {addbagitem("2021年U報");}
+      if (vframe.current===1 && vcprog.current===27) {addbagitem("2023年U報");}
+      if (vframe.current===2 && vcprog.current===10) {addbagitem("P的日記");}
+      if (vframe.current===3 && vcprog.current===21) {addbagitem("劇本");}
+      if (vframe.current===3 && vcprog.current===34) {addbagitem("文件截圖");}
+      if (vframe.current===4 && vcprog.current===8) {addbagitem("相片");}
+      if (vframe.current===4 && vcprog.current===31) {addbagitem("EGM會議紀錄");}
+      if (vframe.current===5 && vcprog.current===15) {addbagitem("2021年U報");}
     }
-    localStorage.setItem('visited',JSON.stringify(visited));
-    localStorage.setItem('bagitem',JSON.stringify(bagitem));
-    localStorage.setItem('cprog',JSON.stringify(cprog));
-    localStorage.setItem('cpath',JSON.stringify(vcpath.current));
     // 1,5~8 -> Undar task , 1,11 -> Epsitha IG, 1,25-> news 2023
     // 2,9 -> pdiary, 2,14->photos
     // 3,6 -> Mandy code, 3,7 -> Mandy IG, 3,16 -> video Mandy cry,  3,20 -> 劇本, 3,33-> 文件截圖
@@ -299,7 +304,7 @@ function App() {
 
   function startingchat() {
     noclickf();
-    scprog(-1);
+    scprog(0);
     sshowprogbut(false);
     setTimeout(() => {progchat(); sspeaking(["","呀U: ","呀P: ","呀Z: ","呀A: ","呀L: "][vframe.current])},1250)
     setTimeout(() => {sshowprogbut(true);},2500)
@@ -531,7 +536,7 @@ function App() {
       </FadeInOut>
       <FadeInOut show={frame>=1} duration={1000}>
       <div className="frame">
-        <button className="genbutton" style={{"top":"min(29vw,58vh)", "right":"min(11vw,22vh)"}} onClick={() => {vtodisctext.current=""; sframe(-1); scprog(-1); vcpath.current=0; sdisctext(""); sshowprogbut(false); noclickf();}}>{"<"}返回地圖</button>
+        <button className="genbutton" style={{"top":"min(29vw,58vh)", "right":"min(11vw,22vh)"}} onClick={() => {vtodisctext.current=""; sframe(-1); scprog(0); vcpath.current=0; sdisctext(""); sshowprogbut(false); noclickf();}}>{"<"}返回地圖</button>
         <button className="genbutton" style={{"top":"min(29vw,58vh)", "right":"0vh"}} onClick={() => {scheckbag(1); noclickf(520);}}>查看背包</button>
         <div className="circle" style={{"top":"min(25vw,50vh)", "left":"min(2.5vw,5vh)", "width":"min(15vw,30vh)", "height":"min(15vw,30vh)", "backgroundImage":"url(./img/"+["blankppl","u","p","z","a","l"][Math.max(0,frame)]+".png)"}}></div>
         <div className="tbub">
@@ -539,8 +544,8 @@ function App() {
           {!showprogbut ? <></> :
            cprog!==0 ? <>
            <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {progchat();}}> {">"} </button>
-           {vframe.current===1 && vcpath.current===0 && cprog===12 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75,1.5vh)", "right":"min(5.5,11vh)"}}> 查看IG </button></a> : <></>}
-           {vframe.current===3 && vcpath.current===0 && cprog===8 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75,1.5vh)", "right":"min(5.5,11vh)"}}> 查看IG </button></a> : <></>}
+           {vframe.current===1 && vcpath.current===0 && vcprog.current===13 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(5.5vw,11vh)"}}> 查看IG </button></a> : <></>}
+           {vframe.current===3 && vcpath.current===0 && vcprog.current===9 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(5.5vw,11vh)"}}> 查看IG </button></a> : <></>}
            </>
           : visited[frame-1] ? 
           <><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(22.5vw,45vh)", "width":"min(25vw,50vh)"}} onClick={() => {vcpath.current=0; progchat();}}>我想探問Stack Undarflow嘅真相!</button>
