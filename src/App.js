@@ -542,7 +542,7 @@ function App() {
         <div className="tbub">
           {frame>0 && cprog!==-1 ? speaking+disctext : ""}
           {!showprogbut ? <></> :
-           cprog!==0 ? <>
+           vcprog.current!==0 ? <>
            <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {progchat();}}> {">"} </button>
            {vframe.current===1 && vcpath.current===0 && vcprog.current===13 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(5.5vw,11vh)"}}> 查看IG </button></a> : <></>}
            {vframe.current===3 && vcpath.current===0 && vcprog.current===9 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(5.5vw,11vh)"}}> 查看IG </button></a> : <></>}
