@@ -1,5 +1,4 @@
 import bgm from "./bgm.mp3"
-import trailer from "./trailer.mp4"
 import { React, useState, useEffect, useRef } from "react";
 import FadeInOut from "./FadeInOut";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
