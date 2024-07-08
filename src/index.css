@@ -145,7 +145,7 @@ button:focus {
   margin: 1vh;
   width: min(12.5vw,25vh);
   height: min(12.5vw,25vh);
-  font-size: min(2vw,4vh);
+  font-size: min(1.75vw,3.5vh);
   border-style: solid;
   border-width: 0.4vh;
 }
