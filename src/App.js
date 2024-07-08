@@ -333,7 +333,7 @@ function App() {
         Stack Undarflow嘅内部團隊一直嘗試隱藏真相, 卻因此背後不斷深受壓力, 最終亦無奈令Stack Undarflow喺2024年2月短暫停辦😔😔.
         為保障Stack Undarflow Phase 2嘅持續運行, Stack Undarflow嘅內部團隊認為有責任向公眾釐清真相, 並聚集咗5位知情人士, 今晚同大家敍述佢哋對事情嘅認知...</div></div></> : <></>}
         {checkbag2===2 ? <><div id="bgnote"><div className="fullop">遊戲預告片:<br></br>
-          <video src={trailer} id="trailer" controls/>
+          <iframe id="trailer" src="https://youtu.be/RI-nUVenGjw"></iframe>
           </div></div></> : <></>}
         {checkbag2===3 ? <><div id="bgnote"><div className="fullop">遊戲玩法:<br></br>
           今晚我哋聚集咗5位知情人士, 分別係呀U, 呀P, 呀Z, 呀A同呀L. 你哋要搵每位知情人士傾兩次計. 第一次傾計, 佢哋會同你講佢哋對Stack Undarflow 嘅認知, 
