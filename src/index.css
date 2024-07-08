@@ -188,6 +188,7 @@ button:focus {
 }
 
 #trailer {
+  width: min(36vw,72vh);
   height: min(18vw,36vh);
   border: #000;
   border-style: solid;
