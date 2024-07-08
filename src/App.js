@@ -255,7 +255,7 @@ function App() {
 
   function addbagitem(n) {
     const temp=bagitem;
-    for (let i=0; i<8; i++) {
+    for (let i=0; i<10; i++) {
       if (temp[i]===n) {return;}
       if (temp[i]==="") {temp[i]=n; localStorage.setItem('bagitem',JSON.stringify(temp)); sbagitem(temp); return;}
     }
