@@ -33,7 +33,7 @@ function App() {
   const [bagitem, sbagitem] = useState(getlocalstorage('bagitem',["0","1","遊戲說明卡","劇本","2021年U報","2023年U報","P的日記","EGM會議紀錄","相片","文件截圖"]));
   const vcpath = useRef(getlocalstorage('cpath',0));
   const [cprog, scprog] = useState(getlocalstorage('cprog',-1));
-  const vcprog = useRef(getlocalstorage('cprog',-1));
+  const vcprog = useRef(getlocalstorage('cprog',0));
 
   useEffect(() => {
     vcprog.current=cprog;
@@ -265,7 +265,6 @@ function App() {
     localStorage.setItem('cpath',JSON.stringify(vcpath.current));
     sshowprogbut(false);
     scprog(cprog+1);
-    console.log(vframe.current,vcpath.current,vcprog.current);
     vtodisctext.current=chat.current[vframe.current][vcpath.current][vcprog.current];
     const time=Math.max(1000,60*vtodisctext.current.length);
     vshowspeed.current=Math.floor(time/chat.current[vframe.current][vcpath.current][vcprog.current].length);
@@ -337,7 +336,7 @@ function App() {
         {checkbag2===2 ? <><div id="bgnote"><div className="fullop">遊戲玩法:<br></br>
           今晚我哋聚集咗5位知情人士, 分別係呀U, 呀P, 呀Z, 呀A同呀L. 你哋要搵每位知情人士傾兩次計. 第一次傾計, 佢哋會同你講佢哋對Stack Undarflow 嘅認知, 
           並畀你哋一啲相關文件. 第二次傾計, 你要將相應嘅文件畀返相應嘅知情人士, 相應嘅知情人士就會為相應嘅文件加以詳述佢哋對該文件嘅認知.
-          遊戲結束前，你要填寫UCM 嘅歷史重組卡，推斷並還原過去三年歷史重組卡上相應時段發生過嘅事情同命案嘅起承轉合。</div></div></> : <></>}
+          遊戲結束前，你要填寫<a href="https://drive.google.com/file/d/1_RJ7j7be8AW5hnPgqhPkZK8_eQAtXXYK/view?usp=sharing" target="_blank" rel="noreferrer" style={{"color":"#ff0"}}>UCM 嘅歷史重組卡</a>，推斷並還原歷史重組卡上相應時段發生過嘅事情同命案嘅起承轉合。</div></div></> : <></>}
         {checkbag2===3 ? <><div id="bgnote"><div className="fullop">角色介紹: (1/3)<br></br>
             Undar	- 2021年入讀港大修讀工程, 在2022年揀選計算機科學為主修, 揀選數學為副修. 自小成績優異, 熱愛編程. 2022年創立了Stack Undarflow, 舉辦多項學術性和非學術性的活動, 多次被人稱為港大工程嘅世一組爸.<br></br><br></br>
             Pilot	- 2021年入讀港大修讀工程, 熱愛足球, 喺同年嘅ENS OCamp認識Undar, 並後來成為互相支持嘅交心朋友. 入學後一直對未來迷惘, 有較多重大決定都比較依靠Undar意見.
@@ -461,8 +460,6 @@ function App() {
     document.title = 'U記 - Phase 1.0 之迷, Undarfly Universe';
     bgmm.current=document.getElementById("audio_tag");
     bgmm.current.loop=true;
-    console.log(bgmm);
-    console.log(bgmm.loop);
   }, []);
 
   return (
@@ -531,7 +528,6 @@ function App() {
         <img className="dir" style={{"top":"min(20vw,2vh)", "left":"min(40vw,80vh)"}} src={"./img/north.png"} alt="" />
         <img className="dir" style={{"bottom":"min(1vw,2vh)", "left":"min(40vw,80vh)"}} src={"./img/south.png"} alt="" />
         <span className="mapinfo">地圖: (灣仔海濱公園)<br/>請點擊你想談天的對象<br/>{mapinfoppl}</span>
-
       </div>
       </FadeInOut>
       <FadeInOut show={frame>=1} duration={1000}>
@@ -540,9 +536,9 @@ function App() {
         <button className="genbutton" style={{"top":"min(29vw,58vh)", "right":"0vh"}} onClick={() => {scheckbag(1); noclickf(520);}}>查看背包</button>
         <div className="circle" style={{"top":"min(25vw,50vh)", "left":"min(2.5vw,5vh)", "width":"min(15vw,30vh)", "height":"min(15vw,30vh)", "backgroundImage":"url(./img/"+["blankppl","u","p","z","a","l"][Math.max(0,frame)]+".png)"}}></div>
         <div className="tbub">
-          {frame>0 && cprog!==-1 ? speaking+disctext : ""}
+          {frame>0 && vcprog.current!==0 ? speaking+disctext : ""}
           {!showprogbut ? <></> :
-           vcprog.current!==0 ? <>
+           vcprog.current!==1 ? <>
            <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {progchat();}}> {">"} </button>
            {vframe.current===1 && vcpath.current===0 && vcprog.current===13 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(5.5vw,11vh)"}}> 查看IG </button></a> : <></>}
            {vframe.current===3 && vcpath.current===0 && vcprog.current===9 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(5.5vw,11vh)"}}> 查看IG </button></a> : <></>}
