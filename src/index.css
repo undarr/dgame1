@@ -171,7 +171,7 @@ button:focus {
 
 #bgnote {
   font-family: monospace, sans-serif;
-  font-size: min(1.9vw,3.8vh);
+  font-size: min(1.7vw,3.4vh);
 
   position: relative;
   left: 10%;

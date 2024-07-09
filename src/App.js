@@ -193,12 +193,12 @@ function App() {
     "不過我走咗之後就入唔返個實驗房, 而呀Undar又唔知穿梭咗去邊...", "去到過多兩日5月4號, 我先再撞返佢... 我同佢講部機爆咗炸, 問佢穿梭咗去邊, 佢又唔知做咩扮到懵懵哋咁...",
     "佢諗咗好耐好耐, 佢先好似知咩事咁, 就話自己穿梭咗去咗好遠好遠嘅地方, 但係我再問佢實際去咗邊, 佢又唔知做咩答唔到...", "咁不過嗰時我都冇理咁多就即刻問佢穿梭機嘅科技, 佢叫我唔好同其他人講, 咁我都應承咗佢...",
     "不過嗰時佢唔見咗張學生證, 到佢申請返嘅時候我先發覺佢畀人踢咗落莊, 入唔返個實驗房...", "我其實好驚訝點解佢會無啦啦落莊, 當時CSA份EGM會議紀錄淨係話Undar無去Superpass幫手,",
-    "但係我就覺得背後有啲嘢嘅, 你可以望下份minutes...", "*呀A畀咗一份文件你, 請查看背包", "不過點都好我嗰時仍然好好奇穿梭機嘅科技, 就提議同佢一齊上莊...",
-    "咁我哋一直都好好哋嘅, 但係12月就出咗場好奇怪嘅意外, 搞到我同Undar上莊有啲kick, 我先同佢分頭行事...",
+    "但係我就覺得背後仲有啲嘢嘅, 你可以望下份minutes...", "*呀A畀咗一份文件你, 請查看背包", "不過點都好我嗰時仍然好好奇穿梭機嘅科技, 就提議同佢一齊上莊...",
+    "咁我哋一直都好好哋嘅, 亦都好快10月份成咗一支後選内閣,", "但係12月就出咗場好奇怪嘅意外, 搞到我同Undar上莊有啲kick, 我先同佢分頭行事...",
     "咁去到2024年1月嘅時候, 呀Undar去咗加拿大exchange, 佢叫我上咗莊之後InnoWing個實驗房啲嘢唔多亂掂...", "不過嗰時我唔知, 我哋個侯選主席已經清好間實驗房, 清到間房好似新嘅一樣...",
     "然後Undar就話我哋揼咗佢一啲重要嘢, 就再整唔返部穿梭機...", "佢當時好灰心, 先至唔再搞Stack Undarflow...",
-    "咁Phase 1.0就係咁完咗, 但係我覺得就算學唔到穿梭機嘅科技, Stack Undarflow 都真係幫到好多學生, 好有意義...", "我先搵返Undar繼續幫吓人, 咁佢諗咗陣都應承咗, 就同我搵返Lewis一齊策劃Phase 2咁...",
-    "而家Stack Undarflow 就有幸有Phase 2啦, 咁希望Stack Undarflow 可以持續營運, 幫多幾屆學生啦...", "⠀"
+    "咁Phase 1.0就係咁完咗, 但係我覺得就算學唔到穿梭機嘅科技, Stack Undarflow 都真係幫到好多學生, 好有意義...", "我先搵返Undar繼續幫吓人, 咁佢諗咗陣都應承咗, 就同我搵返Lewis一齊策劃Phase 2.0咁...",
+    "而家Stack Undarflow 就有幸有Phase 2.0啦, 咁希望Stack Undarflow 可以持續營運, 幫多幾屆學生啦...", "⠀"
   ],
 
   ["咦, 你過嚟搵我做咩呀?", "唉呢場意外... 我都唔係幾想講...", "當時我個中同Glisson無啦啦跳海, 我真係畀佢嚇親... 呢件事仲搞到Undar畀警察拉咗去拘留...",
@@ -206,7 +206,8 @@ function App() {
     "我哋先臨時轉個策略, 打算By election拉返佢上莊...", "但係嗰時我哋清咗間實驗房, 佢都知再上莊都冇意義, 所以最後佢都唔決定唔再上...", "其實我都幾可憐佢, 所以我之後都不斷陪佢, 但係嗰時我真係好難做...",
     "同埋最後好似都查唔到點解我個中同會跳海...", "我最後一次見佢嘅時候, 係喺2023年尾嘅數碼港Hackathon... 嗰晚比賽之後我哋又去香港仔散步...",
     "嗰陣佢同我講話近期佢發現咗高能量量子喺水入邊長期散發會輻射出超能量, 令到感染到輻射嘅人有超能力喎...", "我都唔知佢係咪講笑, 都唔知佢讀咗咩geog定chem course學返嚟嘅...",
-    "同埋就算關事, 我都唔知點解佢會覺得呢度海底會無啦啦有啲高能量嘅嘢...", "其實我哋由中一開始就識, 都識七年... 佢無啦啦跳海走咗, 我都好唔開心...", "咁不過都過咗喇, 事係可惜嘅, 但係大家都move on咗就算喇...", "⠀"
+    "同埋就算關事, 我都唔知點解佢會覺得呢度海底會無啦啦有啲高能量嘅嘢...", "其實我中二嗰時就識咗佢, 大家都識咗七年... 佢無啦啦跳海走咗, 我同佢班中學frd都好唔開心...",
+    "佢自小遊水跳水係好勁, 好多比賽都贏過好多獎, 我係都好想知佢當時跳海係咪一場意外…", "咁不過都過咗喇, 事係可惜嘅, 但係大家都move on咗就算喇...", "⠀"
     
   ], ["咦, 你過嚟搵我做咩呀?", "吓... 呢個我唔知咩嚟㗎喎...", "⠀"]],
 
@@ -331,7 +332,7 @@ function App() {
         2021年12月嘅一日，Stack Undarflow嘅組媽遺憾地喺維港遇到海難離世。呢位女仔離世之後，一份失喪嘅愛卻一直推動住我哋進步同擴展，並喺一屆又一屆嘅組仔女間流傳...
         唯獨時間長咗，Stack Undarflow嘅初心同營運目的慢慢變得模糊，而Stack Undarflow嘅內部運作模式亦變得複雜，更不幸地喺其中牽涉到<span className="boldy">多單致命意外🥶</span>。
         Stack Undarflow嘅内部團隊一直嘗試隱藏真相, 卻因此背後不斷深受壓力, 最終亦無奈令Stack Undarflow喺2024年2月短暫停辦😔😔.
-        為保障Stack Undarflow Phase 2嘅持續運行, Stack Undarflow嘅內部團隊認為有責任向公眾釐清真相, 並聚集咗5位知情人士, 今晚同大家敍述佢哋對事情嘅認知...</div></div></> : <></>}
+        為保障Stack Undarflow Phase 2.0嘅持續運行, Stack Undarflow嘅內部團隊認為有責任向公眾釐清真相, 並聚集咗5位知情人士, 今晚同大家敍述佢哋對事情嘅認知...</div></div></> : <></>}
         {checkbag2===2 ? <><div id="bgnote"><div className="fullop">遊戲預告片:<br></br>
           <iframe  title="trailer" id="trailer" src="https://www.youtube.com/embed/RI-nUVenGjw?si=FxPSQ6Ruw6tgi2Xe"></iframe>
           </div></div></> : <></>}
@@ -345,10 +346,12 @@ function App() {
             </div></div></> : <></>}
         {checkbag2===5 ? <><div id="bgnote"><div className="fullop">角色介紹: (2/3)<br></br>
           Zepa - 2020年入讀港大修讀金融, 在2021年揀選計算機科學為副修, 亦喺同年COMP2121嘅課堂上認識Undar, 從而成為並肩作戰嘅交心朋友. 一直敬佩Undar高超嘅學習能力.<br></br><br></br>
-          Arthur - 2022年入讀港大修讀工程, 在2023年揀選計算機科學為主修, 自少對編程同科幻小說有興趣. 學業成績一般卻求學心態高, 因而喺2022年透過Stack Undarflow舉辦嘅Support Session認識Undar後經常向Undar求學, 亦後來被邀成為Stack Undarflow Phase 2 內部團隊成員之一.
+          Arthur - 2022年入讀港大修讀工程, 在2023年揀選計算機科學為主修, 自少對編程同科幻小說有興趣. 學業成績一般卻求學心態高, 因而喺2022年透過Stack Undarflow舉辦嘅Support Session認識Undar後經常向Undar求學, 亦後來被邀成為Stack Undarflow Phase 2.0 內部團隊成員之一.
             </div></div></> : <></>}
         {checkbag2===6 ? <><div id="bgnote"><div className="fullop">角色介紹: (3/3)<br></br>
-          Lewis - 2022年入讀港大修讀工程, 在2023年揀選土木工程為主修, 揀選計算機科學為副修. 冒險精神高, 喜歡遊山玩水, 2022年透過Stack Undarflow舉辦嘅Interest Group認識Undar, 亦後來被邀成為Stack Undarflow Phase 2 內部團隊成員之一.
+          Lewis - 2022年入讀港大修讀工程, 在2023年揀選土木工程為主修, 揀選計算機科學為副修. 冒險精神高, 喜歡遊山玩水, 2022年透過Stack Undarflow舉辦嘅Interest Group認識Undar, 亦後來被邀成為Stack Undarflow Phase 2.0 內部團隊成員之一.
+          <br></br><br></br>
+          5人外另有其他角色
             </div></div></> : <></>}
         {checkbag2!==1 ? <button className="genbutton" style={{"zIndex":100, "bottom":"min(7.5vw,15vh)", "left":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
         {checkbag2!==6 ? <button className="genbutton" style={{"zIndex":100, "bottom":"min(7.5vw,15vh)", "right":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
