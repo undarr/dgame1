@@ -93,10 +93,10 @@ function App() {
       <div id="starttitle">《U記》</div>
       <div id="startdes">Phase 1.0 之迷</div>
       <button className="startbutton" onClick={() => {sstartingframe(11);}}>開始遊戲</button>
-      <a href="https://fly.undarr.com/ucm/" target="_blank" rel="noreferrer"><button className="startbutton">關於 UCM</button></a>
+      <a href="https://fly.undarr.com/ucm/" target="_blank" rel="noreferrer"><button className="startbutton">關於 UCM系列</button></a>
       <a href="https://flow.undarr.com/" target="_blank" rel="noreferrer"><button className="startbutton">關於 Stack Undarflow</button></a>
       <br></br>
-      <div id="startdes">真人真事Dgame.</div>
+      <div id="startdes">真人真事Dgame, 網上版.</div>
       </>)
     }
     if (n===11) {
@@ -111,7 +111,7 @@ function App() {
       : <button className="startbutton" onClick={() => {startnewgame();}}>開始新遊戲</button>}
       <button className="startbutton" onClick={() => {sstartingframe(1);}}>返回</button>
       <br></br>
-      <div id="startdes">真人真事Dgame.</div>
+      <div id="startdes">真人真事Dgame, 網上版.</div>
       </>)
     }
   }
