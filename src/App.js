@@ -414,36 +414,59 @@ function App() {
       </>
       )
     }
+    //Someone ask why kick Undar (IV), Alexia (Chair) say because he no showed in Superpass on 2nd May 2023
+    //Someone asked if the decision was made in consensus, Alexia (Chair) said CSA held a meeting on 3rd May 2023, and all but Pilot (Sports Sec) decided to vote Undar (IV) out. 
     if (n==="EGM會議紀錄") {
       return(<>
-        {checkbag2===1 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (1/7)<br></br>
-        ** Developer's note: this part is incomplete! ** I'm currently still waiting for CSA to send me the CSA minutes lol, but basically in this minutes mention... 
-        Alexia, Chair of CSA announce they kicked IV, Undar under vote of no-confidence... this meeting is held on 22nd May, 2023
-
+        {checkbag2===1 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (1/6)<br></br>
+          Date: 22nd May 2023 (Monday)<br></br>
+          Time: 19:00 <br/>
+          Venue: UG104, Composite Building, the University of Hong Kong<br/>
+          <br/>
+          Meeting Chairperson: LH Hon<br/>
+          Acting Honorary Secretary: WP Hui<br/>
+          Returning Officer: HL Wong<br/>
           </div></div></> : <></>}
-        {checkbag2===2 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (2/7)<br></br>
-        Someone ask why kick Undar (IV), Alexia (Chair) say because he no showed in Superpass on 2nd May 2023
+        {checkbag2===2 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (2/6)<br></br>
+          Agenda:<br/>
+          1. Call to order<br/>
+          2. To cast a vote of non-confidence to the Internal Vice Chairperson YT Chan<br/>
+          3. Any other business<br/>
+          <br/>
+          1. Call to order, Meeting Chairperson LH Hon asked if there were any doubts on the Meeting
+          regulations. If not, the Meeting would be moved to agendum 2.<br/>
         
           </div></div></> : <></>}
-        {checkbag2===3 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (3/7)<br></br>
-        Someone asked if the decision was made in consensus, Alexia (Chair) said CSA held a meeting on 3rd May 2023, and all but Pilot (Sports Sec) decided to vote Undar (IV) out. 
-        
+        {checkbag2===3 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (3/6)<br></br>
+          2. To cast a vote of non-confidence to the Internal Vice Chairperson of Meliora<br/>
+          Meeting Chairperson LH Hon explained the voting procedures.<br/>
+          Meeting Chairperson LH Hon announced the number of valid voters was 43, and
+          voters could obtain their votes from the Returning Officer<br/>
+          <br/>
+          Resolution: Among 43 votes conducted, the voting result was as follows:<br/>
+          43 votes for dismissing the Internal Vice Chairperson of CSA, 0 vote against.
         </div></div></> : <></>}
-        {checkbag2===4 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (4/7)<br></br>
-        Meeting closed
-        
+        {checkbag2===4 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (4/6)<br></br>
+          3. Any other business<br/>
+          Meeting Chairperson LH Hon asked if there were any other business.<br/>
+          Ordinary Member CY Shiu asked the Chairperson of CSA why the vote of non-confidence was given to the Internal Vice Chairperson<br/>
+          Chairperson CY Chan explained that the Internal Vice Chairperson YT Chan did not perform his duty during the CSA Superpass on 2nd May 2023, and did not attend
+          the meeting on 3rd May 2023 without proper reasons.
         </div></div></> : <></>}
-        {checkbag2===5 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (5/7)<br></br>
-        
+        {checkbag2===5 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (5/6)<br></br>
+          Ordinary Member CY Shiu asked the Chairperson of CSA if the whole cabinet lost confidence in the Internal Vice Chairperson<br/>
+          Chairperson CY Chan stated that according to the internal meeting held on 3rd May 2023, all members but Sports Secretary PL Tam, has lost confidence in 
+          the Internal Vice Chairperson and has agreed to hold an EGM to dismiss him.
         </div></div></> : <></>}
-        {checkbag2===6 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (6/7)<br></br>
-        
-        </div></div></> : <></>}
-        {checkbag2===7 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (7/7)<br></br>
-        
+        {checkbag2===6 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (6/6)<br></br>
+          No other business were discussed.<br/>
+          At 19:10, 22nd May 2023, Meeting Chairperson LH Hon announced that the Meeting was adjourned.<br/>
+          <br/>
+          Side note:<br/>
+          YT Chan = Undar, PL Tam = Pilot.
         </div></div></> : <></>}
         {checkbag2!==1 ? <button className="genbutton" style={{"zIndex":30, "bottom":"min(7.5vw,15vh)", "left":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2-1);}}> {"<"} </button> : <></>}
-        {checkbag2!==7 ? <button className="genbutton" style={{"zIndex":30, "bottom":"min(7.5vw,15vh)", "right":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
+        {checkbag2!==6 ? <button className="genbutton" style={{"zIndex":30, "bottom":"min(7.5vw,15vh)", "right":"min(12.5vw,25vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {scheckbag2(checkbag2+1);}}> {">"} </button> : <></>}
       </>
       )
     }
