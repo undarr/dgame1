@@ -339,8 +339,8 @@ function App() {
         {checkbag2===3 ? <><div id="bgnote"><div className="fullop">遊戲玩法:<br></br>
           今晚我哋聚集咗5位知情人士同大家交代3單命案同1單失蹤案. 5位知情人士分別係呀U, 呀P, 呀Z, 呀A同呀L. 你哋要同每位知情人士傾兩次計, 
           傾計順序沒有限制. 第一次傾計, 佢哋會同你講佢哋對Stack Undarflow 嘅認知, 並畀你哋一啲相關文件. 第二次傾計, 你要將相應嘅文件畀返相應嘅知情人士, 
-          相應嘅知情人士就會為相應嘅文件加以詳述佢哋對該文件嘅認知. 遊戲結束前，你要填寫
-          <a href="https://drive.google.com/file/d/1QBMULT2zvHmgTxN6ymtXRmtbl-Vc9ley/view?usp=sharing" target="_blank" rel="noreferrer" style={{"color":"#ff0"}}>UCM 意外報告</a>，
+          相應嘅知情人士就會為相應嘅文件加以詳述佢哋對該文件嘅認知. 遊戲結束前, 你要填寫
+          <a href="https://drive.google.com/file/d/1QBMULT2zvHmgTxN6ymtXRmtbl-Vc9ley/view?usp=sharing" target="_blank" rel="noreferrer" style={{"color":"#ff0"}}>UCM 意外報告</a>, 
           推斷並還原3單命案同1單失蹤案嘅受害人, 意外日期, 同起承轉合.</div></div></> : <></>}
         {checkbag2===4 ? <><div id="bgnote"><div className="fullop">角色介紹: (1/3)<br></br>
             Undar	- 2021年入讀港大修讀工程, 在2022年揀選計算機科學為主修, 揀選數學為副修. 自小成績優異, 熱愛編程. 2022年創立了Stack Undarflow, 舉辦多項學術性和非學術性的活動, 多次被人稱為港大工程嘅世一組爸.<br></br><br></br>
