@@ -341,7 +341,7 @@ function App() {
           傾計順序沒有限制. 第一次傾計, 佢哋會同你講佢哋對Stack Undarflow 嘅認知, 並畀你哋一啲相關文件. 第二次傾計, 你要將相應嘅文件畀返相應嘅知情人士, 
           相應嘅知情人士就會為相應嘅文件加以詳述佢哋對該文件嘅認知. 遊戲結束前, 你要填寫
           <a href="https://drive.google.com/file/d/1GgjC5cNQ3pYW1sJxNLdK8_St8-xJVmWp/view?usp=sharing" target="_blank" rel="noreferrer" style={{"color":"#ff0"}}>UCM 意外報告</a>, 
-          推斷並還原3單命案同1單失蹤案嘅受害人, 意外日期, 同意外嘅s起承轉合.</div></div></> : <></>}
+          推斷並還原3單命案同1單失蹤案嘅受害人, 意外日期, 同意外嘅起承轉合.</div></div></> : <></>}
         {checkbag2===4 ? <><div id="bgnote"><div className="fullop">角色介紹: (1/3)<br></br>
             Undar	- 2021年入讀港大修讀工程, 在2022年揀選計算機科學為主修, 揀選數學為副修. 自小成績優異, 熱愛編程. 2022年創立了Stack Undarflow, 舉辦多項學術性和非學術性的活動, 多次被人稱為港大工程嘅世一組爸.<br></br><br></br>
             Pilot	- 2021年入讀港大修讀工程, 熱愛足球, 喺同年嘅ENS OCamp認識Undar, 並後來成為互相支持嘅交心朋友. 入學後一直對未來迷惘, 有較多重大決定都比較依靠Undar意見.
