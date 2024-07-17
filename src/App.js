@@ -119,7 +119,7 @@ function App() {
   const chat=useRef([[],[["咦, 你過嚟搵我做咩呀?", "唉, Stack Undarflow嘅真相... 其實一開始都真係唔關我事...", "但係一講起, 又諗起返組媽,", "而一諗起就唔開心...",
     "開始講之前, 我哋先一齊悼念組媽啦, 佢2021年尾起呢度沉船走咗...", "*攞起白花", "組媽, 我哋多謝妳...", "多謝妳對組爸嘅愛...", "多謝妳幫咗我哋...", "我哋會永遠記住妳...",
     "*放低白花", "... 唉, 我覺得都要同你哋講組媽係邊個...", "今日Stack Undarflow 嘅組媽就係 @epsithafung_0818嘅Epsitha.", "嗰時我同佢一齊咗, 我就諗住帶佢嚟呢度玩... 點知就有意外出咗事...",
-    "我好掛住組媽, 而我真係好想返返轉頭...", "意外之後, 我同呀P都努力緊起港大一間實險房嘗試整啲嘢返轉頭...", "一路我遇上好多好多挫折, 我覺得世界好唔公平, 自己好辛苦...",
+    "我好掛住組媽, 而我真係好想返返轉頭...", "意外之後, 我同呀P都努力緊起港大一間實驗房嘗試整啲嘢返轉頭...", "一路我遇上好多好多挫折, 我覺得世界好唔公平, 自己好辛苦...",
     "去到有次我就嚟成功... 我只係行開咗幾日去咗科大研究啲嘢...", "你哋Stack Undarflow嘅組爸就入咗個實驗房整爛咗我部機... 我嗰陣真係好崩潰...", "你哋組爸嗰時應該忙住搞CSA個Superpass, 都唔知佢無啦啦嚟搞我做咩...",
     "嗰時呀P又成日拍拖又唔幫我...", "不過就係咁, 我識咗呀A, 佢叫我繼續努力, 唔好放棄...", "佢又同我講Stack Undarflow嘅嘢, 我先發覺原來Stack Undarflow 好勁, 可以好快識到好多港大學生,",
     "而間實驗房係要上CSA莊先入到嘅, 呀A幫我底下, 我先開始搞 Stack Undarflow嘅...", "嗰時都搞咗好多event, 又開sem飯, 又Ultrapass, 係好容易好快識到好多人...",
@@ -215,7 +215,7 @@ function App() {
     "聽佢講佢當年沉船嘅故事佢都沉到幾癲, 而佢沉得嚟又真係幫到好多人...", "但係佢沉船沉極都唔夠我癲㗎啦, 因為我真係沉咗㗎船~",
     "我中六12月有次學校假期同班frd去香港仔玩, 當時我有兩個朋友有遊艇牌, 我哋就租咗兩㗎遊艇嚟玩,", "上咗遊艇之後, 我哋就決定環繞香港島兜一個圈... 去到中環嗰陣, 我個friend有啲攰, 就想畀我試吓揸㗎遊艇...",
     "咁我不嬲好大膽㗎, 就真係走咗去試... 而唔講笑我一開始都揸得幾好...", "不過後來我嚟到呢度附近就想試下加速, 就失手直接炒埋去我第二個frd㗎遊艇度...", "我都唔知咩事, 撞嗰吓明明好輕力, 但係就突然間成㗎遊艇著曬火...",
-    "嗰吓真係好驚, 我同我啲friend即刻跳船游去係第二㗎游艇避難,", "游到第二㗎遊艇嘅時候, 原本嗰㗎遊艇已經沉咗一半...", "然後過咗陣就連㗎船都見唔到, 唔講笑真係好誇張...",
+    "嗰吓真係好驚, 我同我啲friend即刻跳船游去第二架游艇避難,", "游到第二㗎遊艇嘅時候, 原本嗰㗎遊艇已經沉咗一半...", "然後過咗陣就連㗎船都見唔到, 唔講笑真係好誇張...",
     "不過好彩係無人受傷, 之後賠返錢都唔使再點跟進...", "之後我睇返報紙先知原來係機件過舊, 你哋睇下...", "*呀L畀咗份報章你, 請查看背包...", "唔知啦, 可能之後大家搭船都要小心啲啦...",
     "我嗰時同組爸講咗呢個故事, 佢都呆曬咀...", "不過其實我中六仲有單嘢係再痴線啲想同大家分享...", "但係嗰單嘢聽聞最後搞出人命, 我就唔多講喇...", "之後Stack Undarflow 搞活動, 大家記得我係水火神就得㗎喇...", "⠀"
   ],
@@ -440,13 +440,13 @@ function App() {
         
           </div></div></> : <></>}
         {checkbag2===3 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (3/6)<br></br>
-          2. To cast a vote of non-confidence to the Internal Vice Chairperson of Meliora<br/>
+          2. To cast a vote of non-confidence to the Internal Vice Chairperson YT Chan<br/>
           Meeting Chairperson LH Hon explained the voting procedures.<br/>
           Meeting Chairperson LH Hon announced the number of valid voters was 43, and
           voters could obtain their votes from the Returning Officer<br/>
           <br/>
           Resolution: Among 43 votes conducted, the voting result was as follows:<br/>
-          43 votes for dismissing the Internal Vice Chairperson of CSA, 0 vote against.
+          42 votes for dismissing the Internal Vice Chairperson of CSA, 1 vote against.
         </div></div></> : <></>}
         {checkbag2===4 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (4/6)<br></br>
           3. Any other business<br/>
