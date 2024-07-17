@@ -120,10 +120,10 @@ function App() {
     "開始講之前, 我哋先一齊悼念組媽啦, 佢2021年尾起呢度沉船走咗...", "*攞起白花", "組媽, 我哋多謝妳...", "多謝妳對組爸嘅愛...", "多謝妳幫咗我哋...", "我哋會永遠記住妳...",
     "*放低白花", "... 唉, 我覺得都要同你哋講組媽係邊個...", "今日Stack Undarflow 嘅組媽就係 @epsithafung_0818嘅Epsitha.", "嗰時我同佢一齊咗, 我就諗住帶佢嚟呢度玩... 點知就有意外出咗事...",
     "我好掛住組媽, 而我真係好想返返轉頭...", "意外之後, 我同呀P都努力緊起港大一間實驗房嘗試整啲嘢返轉頭...", "一路我遇上好多好多挫折, 我覺得世界好唔公平, 自己好辛苦...",
-    "去到有次我就嚟成功... 我只係行開咗幾日去咗科大研究啲嘢...", "你哋Stack Undarflow嘅組爸就入咗個實驗房整爛咗我部機... 我嗰陣真係好崩潰...", "你哋組爸嗰時應該忙住搞CSA個Superpass, 都唔知佢無啦啦嚟搞我做咩...",
-    "嗰時呀P又成日拍拖又唔幫我...", "不過就係咁, 我識咗呀A, 佢叫我繼續努力, 唔好放棄...", "佢又同我講Stack Undarflow嘅嘢, 我先發覺原來Stack Undarflow 好勁, 可以好快識到好多港大學生,",
-    "而間實驗房係要上CSA莊先入到嘅, 呀A幫我底下, 我先開始搞 Stack Undarflow嘅...", "嗰時都搞咗好多event, 又開sem飯, 又Ultrapass, 係好容易好快識到好多人...",
-    "而我都好快同呀A成咗支侯選內閣, 諗住上CSA.", "但係去到十二月就出咗事... 仲上埋報紙, 你哋望吓...", "*呀U畀咗份報章你, 請查看背包...", "嗰陣有日我嚟返呢度悼念組媽死咗兩年, 無啦啦有個組仔stalk我...",
+    "去到2023年5月嗰陣我就嚟成功... 我只係行開咗幾日去咗科大研究啲嘢...", "我整緊嘅嗰部機就冇啦啦畀人整到炸爛咗... 我嗰陣真係好崩潰...",
+    "嗰時呀P又成日拍拖又唔幫我...", "不過就係咁, 我識咗呀A, 佢叫我繼續努力, 唔好放棄...", "佢又同我講Stack Undarflow嘅嘢, 我先發覺原來Stack Undarflow好頸, 真係有好多受眾",
+    "咁間實驗房係要上CSA莊先入到嘅, 呀A幫我底下, 我先開始試吓將Stack Undarflow搞爆啲...", "嗰時我都搞咗好多event, 又開sem飯, 又Ultrapass, 係好容易好快識到好多人...",
+    "而我都好快同呀A成咗支CSA侯選內閣,", "但係去到十二月就出咗事... 仲上埋報紙, 你哋望吓...", "*呀U畀咗份報章你, 請查看背包...", "嗰陣有日我嚟返呢度悼念組媽死咗兩年, 無啦啦有個組仔stalk我...",
     "Stalk咗陣就無啦啦撲埋嚟跳咗落海... 之後有人報警但係救唔返佢...", "個組仔係Year 1, 佢嗰時有嚟過我一場Support Session... 我覺得佢都正正常常...", "嗰陣同佢傾過計佢話佢鍾意跳水, 但係佢跳海嗰吓真係嚇親我...",
     "佢跳咗海之後我都唔知點算, 但係後來有警察拉我去調查...", "咁啱嗰陣我就prep緊上莊啲嘢, 而我一畀人拉去扣留就支莊散曬... 呀A又無啦啦揼低我... 仲改埋支莊名...",
     "嗰時我真係好唔開心... 但係呀A話會之後拉返我上莊... 我先夾硬頂多陣...", "但係最後佢哋話間實驗房啲嘢攞唔返, 上莊又好kick, 我就覺得Stack Undarflow Phase 1.0 都無謂再堅持...",
@@ -151,7 +151,7 @@ function App() {
 
   ["咦, 你過嚟搵我做咩呀?", "呀呢份minutes... 當時CSA踢人出莊呢壇嘢...", "其實我知道呢件事對呀U好重要, 因為佢好需要用CSA嘅實驗房.",
     "2021年尾我哋出咗事之後, 我哋就借咗CSA喺InnoWing嘅一間實驗房想整啲嘢返轉頭,", "後來CSA起InnoWing註冊咗之後攞返間房, 我哋攞唔翻間房入邊啲嘢, 呀U就叫我上莊.",
-    "不過我上咗莊先發現, 得3C先可以入去間實驗房, 不過呀U就因為組爸係IV, 就用到間房...", "所以當時踢人落莊呢壇嘢, 搞到呀U再入唔翻CSA嘅實驗房, 佢就好嬲好嬲...",
+    "咁上咗莊之後呀U就可以用返間實驗房... 所以當時踢人落莊呢壇嘢, 搞到呀U再入唔翻CSA嘅實驗房, 佢就好嬲好嬲...",
     "嗰時佢有鬧我點解搞到踢人落莊咁大鑊, 但係我當時係Sports Sec都冇咩話事權...", "同埋當時Superpass佢唔見人, 之後開會佢又去咗科大唔知研究咩, 睇唔到我訊息...",
     "我都冇咩合理理由說服CSA唔踢人.", "其實我一直都有啲內疚, 我當初係應承咗呀U一齊返去...", "但係後來我適應咗呢度嘅生活, 後來仲拍埋拖... 我先決定move on, 接受現況...",
     "我見呀U一直想返去咁辛苦, 都勸過佢試吓move on...", "但係佢性格好頑強, 佢失敗完係唔會屈服, 你哋望吓Stack Undarflow 爆到咁就知...",
@@ -211,7 +211,7 @@ function App() {
     
   ], ["咦, 你過嚟搵我做咩呀?", "吓... 呢個我唔知咩嚟㗎喎...", "⠀"]],
 
-  [["咦, 你過嚟搵我做咩呀?", "Stack Undarflow嘅真相? 咪當年呀U沉船整個嚿嘢出嚟拯救全體Engine學生囉~", "我嗰時參加咗Stack Undarflow嘅Interest Group, 同組爸一齊去踩單車先知佢嘅故事,",
+  [["咦, 你過嚟搵我做咩呀?", "Stack Undarflow嘅真相? 咪當年呀U沉船整咗嚿嘢出嚟拯救全體Engine學生囉~", "我嗰時參加咗Stack Undarflow嘅Interest Group, 同組爸一齊去踩單車先知佢嘅故事,",
     "聽佢講佢當年沉船嘅故事佢都沉到幾癲, 而佢沉得嚟又真係幫到好多人...", "但係佢沉船沉極都唔夠我癲㗎啦, 因為我真係沉咗㗎船~",
     "我中六12月有次學校假期同班frd去香港仔玩, 當時我有兩個朋友有遊艇牌, 我哋就租咗兩㗎遊艇嚟玩,", "上咗遊艇之後, 我哋就決定環繞香港島兜一個圈... 去到中環嗰陣, 我個friend有啲攰, 就想畀我試吓揸㗎遊艇...",
     "咁我不嬲好大膽㗎, 就真係走咗去試... 而唔講笑我一開始都揸得幾好...", "不過後來我嚟到呢度附近就想試下加速, 就失手直接炒埋去我第二個frd㗎遊艇度...", "我都唔知咩事, 撞嗰吓明明好輕力, 但係就突然間成㗎遊艇著曬火...",
@@ -281,7 +281,7 @@ function App() {
       }
     }
     if (vcpath.current===0) {
-      if (vframe.current===1 && vcprog.current===27) {addbagitem("2023年U報");}
+      if (vframe.current===1 && vcprog.current===26) {addbagitem("2023年U報");}
       if (vframe.current===2 && vcprog.current===10) {addbagitem("P的日記");}
       if (vframe.current===3 && vcprog.current===19) {addbagitem("劇本");}
       if (vframe.current===3 && vcprog.current===32) {addbagitem("文件截圖");}
@@ -453,7 +453,7 @@ function App() {
           Meeting Chairperson LH Hon asked if there were any other business.<br/>
           Ordinary Member CY Shiu asked the Chairperson of CSA why the vote of non-confidence was given to the Internal Vice Chairperson<br/>
           Chairperson CY Chan explained that the Internal Vice Chairperson YT Chan did not perform his duty during the CSA Superpass on 2nd May 2023, and did not attend
-          the meeting on 3rd May 2023 without proper reasons.
+          their internal meeting on 3rd May 2023 without proper reasons.
         </div></div></> : <></>}
         {checkbag2===5 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (5/6)<br></br>
           Ordinary Member CY Shiu asked the Chairperson of CSA if the whole cabinet lost confidence in the Internal Vice Chairperson<br/>
