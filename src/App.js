@@ -578,10 +578,10 @@ function App() {
       if (e.key==="a") {sframe(4); startingchat();}
       if (e.key==="l") {sframe(5); startingchat();}
     }
-    if (e.key==="i" && vtodisctext.current==="今日Stack Undarflow 嘅組媽就係 @epsithafung_0818嘅Epsitha.") {
+    if (e.key==="i" && vtodisctext.current==="今日Stack Undarflow 嘅組媽就係 @epsithafung_0818嘅Epsitha." && vshowprogbut.current) {
       window.open("https://www.instagram.com/epsithafung_0818/");
     }
-    if (e.key==="i" && vtodisctext.current==="咁Stack Undarflow 嘅組媽就係 @mandyfung_0818嘅Mandy啦...") {
+    if (e.key==="i" && vtodisctext.current==="咁Stack Undarflow 嘅組媽就係 @mandyfung_0818嘅Mandy啦..." && vshowprogbut.current) {
       window.open("https://www.instagram.com/mandyfung_0818/");
     }
     console.log(e.key);
