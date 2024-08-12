@@ -657,7 +657,7 @@ function App() {
         <img className="dir" style={{"top":"min(20vw,40vh)", "left":"min(1vw,2vh)"}} src={"./img/west.png"} alt="" />
         <img className="dir" style={{"top":"min(20vw,2vh)", "left":"min(40vw,80vh)"}} src={"./img/north.png"} alt="" />
         <img className="dir" style={{"bottom":"min(1vw,2vh)", "left":"min(40vw,80vh)"}} src={"./img/south.png"} alt="" />
-        <span className="mapinfo">地圖: (灣仔海濱公園)<br/>請點擊你想談天的對象<br/>{mapinfoppl}⠀<br/><br/>遊戲進度: {10*((visited[0].concat(visited[1])).filter(x => x).length)}%</span>
+        <span className="mapinfo">地圖: (灣仔海濱公園)<br/>請點擊你想談天的對象<br/>{mapinfoppl}⠀<br/><br/>遊戲進度: {10*((visited[0].concat(visited[1])).filter(x => x).length)}%<br/>{10===((visited[0].concat(visited[1])).filter(x => x).length) ? <a href="https://drive.google.com/file/d/1BuWuMqD9Z_uIjZYm0gTBSnd-qKlnKiSh/view?usp=sharing" target="_blank" rel="noreferrer" style={{"color":"#ff0"}}>查看答案</a> : <></>}</span>
       </div>
       </FadeInOut>
       <FadeInOut show={frame>=1} duration={1000}>
