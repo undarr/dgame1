@@ -16,7 +16,9 @@ function App() {
     vframe.current=frame;
   },[frame])
   const [checkbag, scheckbag]=useState(getlocalstorage('checkbag',-1));
+  const vcheckbag = useRef(getlocalstorage('checkbag',-1));
   const [checkbag2, scheckbag2]=useState(getlocalstorage('checkbag2',1));
+  const vcheckbag2 = useRef(getlocalstorage('checkbag2',1));
   const [startingframe, sstartingframe] = useState(1);
   const [ongoinggame, songoinggame] = useState(getlocalstorage('ongoinggame',false));
   const [speaking, sspeaking] = useState(getlocalstorage('speaking',""));
@@ -29,14 +31,18 @@ function App() {
   },[disctext])
 
   const [showprogbut, sshowprogbut] = useState(true);
+  const vshowprogbut = useRef(true);
   const [visited, svisited] = useState(getlocalstorage('visited',[[false,false,false,false,false],[false,false,false,false,false]]));
+  const vvisited = useRef(getlocalstorage('visited',[[false,false,false,false,false],[false,false,false,false,false]]));
   const [bagitem, sbagitem] = useState(getlocalstorage('bagitem',["0","1","遊戲說明卡","劇本","2021年U報","2023年U報","P的日記","EGM會議紀錄","相片","文件截圖"]));
   const vcpath = useRef(getlocalstorage('cpath',0));
   const [cprog, scprog] = useState(getlocalstorage('cprog',-1));
   const vcprog = useRef(getlocalstorage('cprog',0));
   const [noclick, snoclick] = useState(false);
   const [qnpc, sqnpc] = useState(getlocalstorage('qnpc',false));
+  const vqnpc = useRef(getlocalstorage('qnpc',false));
   const [muted, smuted] = useState(true);
+  const vmuted = useRef(true);
   const [mapinfoppl, smapinfoppl] = useState("")
 
   useEffect(() => {
@@ -44,6 +50,8 @@ function App() {
   },[checkbag])
 
   useEffect(() => {
+    vcheckbag2.current=checkbag2;
+    console.log('yo',checkbag2);
     localStorage.setItem('checkbag2',JSON.stringify(checkbag2));
   },[checkbag2])
 
@@ -65,7 +73,16 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('qnpc',JSON.stringify(qnpc));
+    vqnpc.current=qnpc;
   },[qnpc])
+
+  useEffect(() => {
+    vshowprogbut.current=showprogbut;
+  },[showprogbut])
+
+  useEffect(() => {
+    vvisited.current=[[...visited[0]],[...visited[1]]];
+  },[visited])
 
   function startnewgame() {
     songoinggame(true);
@@ -75,7 +92,9 @@ function App() {
     scprog(0);
     vcprog.current=0;
     scheckbag(2);
+    vcheckbag.current=2;
     scheckbag2(1);
+    vcheckbag2.current=1;
     sspeaking("");
     sdisctext("");
     vtodisctext.current="";
@@ -117,7 +136,7 @@ function App() {
   }
 
   const chat=useRef([[],[["咦, 你過嚟搵我做咩呀?", "唉, Stack Undarflow嘅真相... 其實一開始都真係唔關我事...", "但係一講起, 又諗起返組媽,", "而一諗起就唔開心...",
-    "開始講之前, 我哋先一齊悼念組媽啦, 佢2021年尾起呢度沉船走咗...", "*攞起白花", "組媽, 我哋多謝妳...", "多謝妳對組爸嘅愛...", "多謝妳幫咗我哋...", "我哋會永遠記住妳...",
+    "開始講之前, 我哋先一齊悼念組媽啦, 佢2021年尾起呢度沉船走咗...", "*攞起白花", "組媽, 我哋多謝妳... 多謝妳對組爸嘅愛... 多謝妳幫咗我哋... 我哋會永遠記住妳㗎...",
     "*放低白花", "... 唉, 我覺得都要同你哋講組媽係邊個...", "今日Stack Undarflow 嘅組媽就係 @epsithafung_0818嘅Epsitha.", "嗰時我同佢一齊咗, 我就諗住帶佢嚟呢度玩... 點知就有意外出咗事...",
     "我好掛住組媽, 而我真係好想返返轉頭...", "意外之後, 我同呀P都努力緊起港大一間實驗房嘗試整啲嘢返轉頭...", "一路我遇上好多好多挫折, 我覺得世界好唔公平, 自己好辛苦...",
     "去到2023年5月嗰陣我就嚟成功... 我只係行開咗幾日去咗科大研究啲嘢...", "我整緊嘅嗰部機就冇啦啦畀人整到炸爛咗... 我嗰陣真係好崩潰...",
@@ -159,10 +178,10 @@ function App() {
      ["咦, 你過嚟搵我做咩呀?", "吓... 呢個我唔知咩嚟㗎喎...", "⠀"]],
 
   [["咦, 你過嚟搵我做咩呀?", "唉Stack Undarflow 嘅真相... 真係講到悶...", "大家都知㗎啦... 咪你哋嘅組爸Undar當年追呀組媽追唔到...", "追唔到就走咗去沉船, 就起咗個Stack Undarflow 出嚟啦...",
-    "佢話咩想透過教啲Year 1學生, 搵返當年教組媽嘅感覺喎...", "呢個故事真係聽到悶, 不過可能你都未知組媽係邊個...", "咁Stack Undarflow嘅組媽就係@mandyfung_0818嘅Mandy啦...", "咁我又可以講多少少嘅...", "2021年9月嘅時候, 我就喺一場Year 2 CS lecture識咗Undar,",
+    "佢話咩想透過教啲Year 1學生, 搵返當年教組媽嘅感覺喎...", "呢個故事真係聽到悶, 不過可能你都未知組媽係邊個...", "咁Stack Undarflow 嘅組媽就係 @mandyfung_0818嘅Mandy啦...", "咁我又可以講多少少嘅...", "2021年9月嘅時候, 我就喺一場Year 2 CS lecture識咗Undar,",
     "當年佢Year 1上Year 2嘅Lecture, 我已經知佢讀書好痴線...", "後來佢介紹咗佢個Omate, Pilot畀我識... 當時我哋三個係好close好firm嘅frd,",
     "咁呀Undar起OCamp隔離組識咗Mandy, 就想追佢... 然後就不斷教佢讀書, 咁我同呀Pilot一直都幫緊佢做軍師...", "但係佢最後喺12月表白失敗... 失敗咗之後佢就搵我同Pilot嚟呢度隊酒去呻...",
-    "不過咁啱前一日呀Pilot踢波拗柴要留院, 就得返我一個陪佢...", "佢嗰日喺度真係喊到痴線㗎, 我畀條片你睇喇...", "*Shows video about Undar cry (Undar: 哎呀Zepa我真係好唔開心呀, 點解Mandy會唔鍾意我㗎... 點解呀...)",
+    "不過咁啱前一日呀Pilot踢波拗柴要留院, 就得返我一個陪佢...", "佢嗰日喺度真係喊到痴線㗎, 我畀條片你睇喇...", "*呀Z畀咗條片你哋睇...",
     "嗰晚佢已經隊酒隊到冧冧哋, 第二日仲要考試, 然後佢仲要話搭船返屋企散心...", "我都知道佢會出事, 然後果然啦, 佢呢架船上面嘔... 佢真係好彩有我陪佢...",
     "我真係唔知點解佢咁鍾意Mandy, 佢後來仲寫埋份追女劇本... 我都唔講笑, 佢真係好癲... 你自己睇下喇...", "*呀Z畀咗份劇本你, 請查看背包...",
     "係囉, 然後佢2022年9月就開始搞Stack Undarflow紀念組媽啦...", "不過2022年其實好怪...", "年頭呀Pilot第五波中咗肺炎, 然後就去咗竹篙灣隔離, 隔離完出返嚟之後就開始唔理我同Undar,",
@@ -170,7 +189,7 @@ function App() {
     "當時佢都搞到我同Undar好唔開心, 但係之後去到2023年6月, 呀Undar又開始好似變到佢咁...", "唔知佢同Pilot忙緊咩變到機都唔覆咁... 聽返嚟呀Pilot就拍緊拖, 呀Undar就好似識咗個叫Christine嘅女仔, 但係又唔知真定假...",
     "我唔希望佢哋重色輕友啦, 但係我就覺得好似突然間冇咗兩個best friend咁... 就算今日, 都係呀Arthur叫我嚟, 而唔係Undar搵我...", "呀Arthur係我2021年尾起一場數碼港Hackathon識嘅, 嗰日我仲識埋佢個中同Glisson...",
     "2023年尾, 我哋又咁啱去咗同一個數碼港Hackathon, 我先知原來佢哋兩個都係Stack Undarflow嘅組仔...", "然後嗰日我問起呀Undar嘅事, 呀Glisson就透露咗Undar喺Stack Undarflow研究緊啲嘢...",
-    "佢影低咗Undar咗啲文件send畀我, 我嗰下真係呆咗, 你哋望吓...", "*呀Z畀咗啲文件截圖你, 請查看背包", "即係我知道Undar讀書勁嘅, 但係我冇諗過佢會數學CS勁到寫到呢啲嘢出嚟嘅level...",
+    "佢影低咗Undar咗啲文件send畀我, 我嗰下真係呆咗, 你哋望吓...", "*呀Z畀咗啲文件截圖你, 請查看背包...", "即係我知道Undar讀書勁嘅, 但係我冇諗過佢會數學CS勁到寫到呢啲嘢出嚟嘅level...",
     "我淨係知咁多咋, Stack Undarflow而家搞緊咩我都唔太清楚, 可能你哋要加油再研究下啦...", "⠀"
   ],
 
@@ -182,7 +201,7 @@ function App() {
   
   [["咦, 你過嚟搵我做咩呀?", "Stack Undarflow 嘅真相... 咁我而家係Stack Undarflow 内部團隊之一, 我的確係知多少少嘅...", "咁其實Stack Undarflow就一直都好好哋嘅, 但係你哋組爸Undar就一直都好古怪.",
     "我第一次識Undar嘅時候係2021年嘅11月, 我當時仲係中六...", "嗰時我同我個中同Glisson去咗數碼港一場Hackathon比賽,", "比賽之後我哋就去咗香港仔食飯, 再去香港仔海傍散步...",
-    "嗰晚我就見到Undar喺一架遊艇上, 而架遊艇唔知做咩有個粉紫色嘅發光門...", "成件事好科幻, 我都唔知點形容好, 你哋自己望下...", "*呀A畀咗一幅相你, 請查看背包",
+    "嗰晚我就見到Undar喺一架遊艇上, 而架遊艇唔知做咩有個粉紫色嘅發光門...", "成件事好科幻, 我都唔知點形容好, 你哋自己望下...", "*呀A畀咗一幅相你, 請查看背包...",
     "嗰時Undar仲鬼鬼鼠鼠咁, 咁過咗陣, 佢就去返個紫色門好似撳啲掣咁...", "然後佢就穿過個紫色門, 棟紫色門就突然冇咗... 咁我都幾肯定嗰棟門係穿梭門嚟嘅...",
     "而我同Glisson不嬲都好鍾意科幻小說, 我哋估唔到現實世界真係會見到有穿梭門...", "我哋一直都好想搵返嗰個人, 而去到2022年我入咗港大, 呀Undar就啱啱創立咗Stack Undarflow.",
     "嗰時我不斷去Stack Undarflow啲活動問Undar穿梭門嘅嘢,", "但係我chok咗佢成兩個學期佢都賴死唔認, 不斷話我認錯人咁...", "直到2023年5月1號, 我見到佢古古怪怪好急忙咁離開InnoWing,",
@@ -193,7 +212,7 @@ function App() {
     "不過我走咗之後就入唔返個實驗房, 而呀Undar又唔知穿梭咗去邊...", "去到過多兩日5月4號, 我先再撞返佢... 我同佢講部機爆咗炸, 問佢穿梭咗去邊, 佢又唔知做咩扮到懵懵哋咁...",
     "佢諗咗好耐好耐, 佢先好似知咩事咁, 就話自己穿梭咗去咗好遠好遠嘅地方, 但係我再問佢實際去咗邊, 佢又唔知做咩答唔到...", "咁不過嗰時我都冇理咁多就即刻問佢穿梭機嘅科技, 佢叫我唔好同其他人講, 咁我都應承咗佢...",
     "不過嗰時佢唔見咗張學生證, 到佢申請返嘅時候我先發覺佢畀人踢咗落莊, 入唔返個實驗房...", "我其實好驚訝點解佢會無啦啦落莊, 當時CSA份EGM會議紀錄淨係話Undar無去Superpass幫手,",
-    "但係我就覺得背後仲有啲嘢嘅, 你可以望下份minutes...", "*呀A畀咗一份文件你, 請查看背包", "不過點都好我嗰時仍然好好奇穿梭機嘅科技, 就提議同佢一齊上莊...",
+    "但係我就覺得背後仲有啲嘢嘅, 你可以望下份minutes...", "*呀A畀咗一份文件你, 請查看背包...", "不過點都好我嗰時仍然好好奇穿梭機嘅科技, 就提議同佢一齊上莊...",
     "咁我哋一直都好好哋嘅, 亦都好快10月份成咗一支後選内閣,", "但係12月就出咗場好奇怪嘅意外, 搞到我同Undar上莊有啲kick, 我先同佢分頭行事...",
     "咁去到2024年1月嘅時候, 呀Undar去咗加拿大exchange, 佢叫我上咗莊之後InnoWing個實驗房啲嘢唔多亂掂...", "不過嗰時我唔知, 我哋個侯選主席已經清好間實驗房, 清到間房好似新嘅一樣...",
     "然後Undar就話我哋揼咗佢一啲重要嘢, 就再整唔返部穿梭機...", "佢當時好灰心, 先至唔再搞Stack Undarflow...",
@@ -259,19 +278,16 @@ function App() {
   function progchat(progstep=1) {
     localStorage.setItem('cpath',JSON.stringify(vcpath.current));
     sshowprogbut(false);
-    //console.log('b',vframe.current,vcpath.current, vcprog.current,progstep); 
     scprog(vcprog.current+progstep);
     vcprog.current=vcprog.current+progstep;
-    //console.log('a',vframe.current,vcpath.current, vcprog.current);
     vtodisctext.current=chat.current[vframe.current][vcpath.current][vcprog.current];
     const time=Math.max(1000,60*vtodisctext.current.length);
     vshowspeed.current=Math.floor(time/chat.current[vframe.current][vcpath.current][vcprog.current].length);
-    //console.log('a',vtodisctext.current,time,vshowspeed.current); 
     if (vtodisctext.current==="⠀") {
       sdisctext("");
     }
     else {
-      if (vcpath.current!==2 && visited[vcpath.current][frame-1]) {
+      if (vcpath.current!==2 && vvisited.current[vcpath.current][vframe.current-1] && vtodisctext.current!=="咦, 你過嚟搵我做咩呀?") {
         sdisctext(vtodisctext.current);
         sshowprogbut(true);
       }
@@ -281,18 +297,14 @@ function App() {
       }
     }
     if (vcpath.current===0) {
-      if (vframe.current===1 && vcprog.current===26) {addbagitem("2023年U報");}
-      if (vframe.current===2 && vcprog.current===10) {addbagitem("P的日記");}
-      if (vframe.current===3 && vcprog.current===19) {addbagitem("劇本");}
-      if (vframe.current===3 && vcprog.current===32) {addbagitem("文件截圖");}
-      if (vframe.current===4 && vcprog.current===8) {addbagitem("相片");}
-      if (vframe.current===4 && vcprog.current===31) {addbagitem("EGM會議紀錄");}
-      if (vframe.current===5 && vcprog.current===15) {addbagitem("2021年U報");}
+      if (vtodisctext.current==="*呀U畀咗份報章你, 請查看背包...") {addbagitem("2023年U報");}
+      if (vtodisctext.current==="*呀P畀咗一張日記紙你, 請查看背包...") {addbagitem("P的日記");}
+      if (vtodisctext.current==="*呀Z畀咗份劇本你, 請查看背包...") {addbagitem("劇本");}
+      if (vtodisctext.current==="*呀Z畀咗啲文件截圖你, 請查看背包...") {addbagitem("文件截圖");}
+      if (vtodisctext.current==="*呀A畀咗一幅相你, 請查看背包...") {addbagitem("相片");}
+      if (vtodisctext.current==="*呀A畀咗一份文件你, 請查看背包...") {addbagitem("EGM會議紀錄");}
+      if (vtodisctext.current==="*呀L畀咗份報章你, 請查看背包...") {addbagitem("2021年U報");}
     }
-    // 1,5~8 -> Undar task , 1,11 -> Epsitha IG, 1,25-> news 2023
-    // 2,9 -> pdiary, 2,14->photos
-    // 3,6 -> Mandy code, 3,7 -> Mandy IG, 3,16 -> video Mandy cry,  3,20 -> 劇本, 3,33-> 文件截圖
-    // ["0","1","遊戲說明卡","劇本","2021年U報","2023年U報","P的日記","EGM會議紀錄","相片","文件截圖"]
   }
 
   function noclickf(t=1500) {
@@ -311,17 +323,18 @@ function App() {
 
   function bagbutton(n) {
     scheckbag2(1);
+    vcheckbag2.current=1;
     if (bagitem[n]!=="") {
-      if (qnpc) {
-        if (vframe.current===1 && bagitem[n]==="文件截圖") {scheckbag(-1); vcpath.current=1; progchat();}
-        else if (vframe.current===2 && bagitem[n]==="EGM會議紀錄") {scheckbag(-1); vcpath.current=1; progchat();}
-        else if (vframe.current===3 && bagitem[n]==="2021年U報") {scheckbag(-1); vcpath.current=1; progchat();}
-        else if (vframe.current===4 && bagitem[n]==="2023年U報") {scheckbag(-1); vcpath.current=1; progchat();}
-        else if (vframe.current===5 && bagitem[n]==="P的日記") {scheckbag(-1); vcpath.current=1; progchat();}
-        else {scheckbag(-1); vcpath.current=2; progchat();}
+      if (vqnpc.current) {
+        if (vframe.current===1 && bagitem[n]==="文件截圖") {scheckbag(-1); vcheckbag.current=-1; vcpath.current=1; progchat();}
+        else if (vframe.current===2 && bagitem[n]==="EGM會議紀錄") {scheckbag(-1); vcheckbag.current=-1; vcpath.current=1; progchat();}
+        else if (vframe.current===3 && bagitem[n]==="2021年U報") {scheckbag(-1); vcheckbag.current=-1; vcpath.current=1; progchat();}
+        else if (vframe.current===4 && bagitem[n]==="2023年U報") {scheckbag(-1); vcheckbag.current=-1; vcpath.current=1; progchat();}
+        else if (vframe.current===5 && bagitem[n]==="P的日記") {scheckbag(-1); vcheckbag.current=-1; vcpath.current=1; progchat();}
+        else {scheckbag(-1); vcheckbag.current=-1; vcpath.current=2; progchat();}
         sqnpc(false);
       }
-      else {scheckbag(n);}
+      else {scheckbag(n); vcheckbag.current=n;}
     }
   }
 
@@ -416,8 +429,7 @@ function App() {
       </>
       )
     }
-    //Someone ask why kick Undar (IV), Alexia (Chair) say because he no showed in Superpass on 2nd May 2023
-    //Someone asked if the decision was made in consensus, Alexia (Chair) said CSA held a meeting on 3rd May 2023, and all but Pilot (Sports Sec) decided to vote Undar (IV) out. 
+
     if (n==="EGM會議紀錄") {
       return(<>
         {checkbag2===1 ? <><div id="bgnote"><div className="fullop">CSA EGM minutes: (1/6)<br></br>
@@ -490,7 +502,90 @@ function App() {
     document.title = 'U記 - Phase 1.0 之迷, Undarfly Universe';
     bgmm.current=document.getElementById("audio_tag");
     bgmm.current.loop=true;
+    window.addEventListener('keydown', handlekeypress);
+    return () => {
+        window.removeEventListener('keydown', handlekeypress);
+    };
   }, []);
+
+  function handlekeypress(e) {
+    if (e.key==="s") {
+      if (vmuted.current) {bgmm.current.play(); smuted(false); vmuted.current=false} else {bgmm.current.pause(); smuted(true); vmuted.current=true;}
+    }
+    if (e.key==="h" && vframe.current>=-1) {
+      sstartingframe(1); sframe(-2); noclickf();
+    }
+    if (e.key==="ArrowLeft" && vtodisctext.current!=="咦, 你過嚟搵我做咩呀?" && vframe.current>=1 && vcheckbag.current<=0 && vshowprogbut.current && vcpath.current!==2 && vvisited.current[vcpath.current][vframe.current-1]) {
+      progchat(-1);
+    }
+    if (e.key==="ArrowLeft" && vtodisctext.current!=="咦, 你過嚟搵我做咩呀?" && vframe.current>=1 && vcheckbag.current<=0 && vtodisctext.current==="⠀" && vcpath.current!==2 && vvisited.current[vcpath.current][vframe.current-1]) {
+      progchat(-1);
+    }
+    if (e.key==="ArrowRight" && vframe.current>=1 && vcheckbag.current<=0 && vshowprogbut.current) {
+      if (vvisited.current[0][vframe.current-1] && vtodisctext.current==="咦, 你過嚟搵我做咩呀?") {sqnpc(true); scheckbag(1); vcheckbag.current=1;}
+      else {progchat();}
+    }
+    if (e.key==="Enter" && vframe.current>=1 && vcheckbag.current<=0 && vshowprogbut.current) {
+      if (vvisited.current[0][vframe.current-1] && vtodisctext.current==="咦, 你過嚟搵我做咩呀?") {sqnpc(true); scheckbag(1); vcheckbag.current=1;}
+      else {progchat();}
+    }
+    if (e.key==="ArrowRight" && vframe.current>=-1 && vcheckbag.current>0) {
+      if (bagitem[vcheckbag.current]==="遊戲說明卡" && vcheckbag2.current!==6) {scheckbag2(vcheckbag2.current+1);}
+      if (bagitem[vcheckbag.current]==="劇本" && vcheckbag2.current!==7) {scheckbag2(vcheckbag2.current+1);}
+      if (bagitem[vcheckbag.current]==="EGM會議紀錄" && vcheckbag2.current!==6) {scheckbag2(vcheckbag2.current+1);}
+      if (bagitem[vcheckbag.current]==="文件截圖" && vcheckbag2.current!==2) {scheckbag2(vcheckbag2.current+1);}
+    }
+    if (e.key==="Enter" && vframe.current>=-1 && vcheckbag.current>0) {
+      if (bagitem[vcheckbag.current]==="遊戲說明卡" && vcheckbag2.current!==6) {scheckbag2(vcheckbag2.current+1);}
+      if (bagitem[vcheckbag.current]==="劇本" && vcheckbag2.current!==7) {scheckbag2(vcheckbag2.current+1);}
+      if (bagitem[vcheckbag.current]==="EGM會議紀錄" && vcheckbag2.current!==6) {scheckbag2(vcheckbag2.current+1);}
+      if (bagitem[vcheckbag.current]==="文件截圖" && vcheckbag2.current!==2) {scheckbag2(vcheckbag2.current+1);}
+    }
+    if (e.key==="ArrowLeft" && vframe.current>=-1 && vcheckbag.current>0) {
+      if (bagitem[vcheckbag.current]==="遊戲說明卡" && vcheckbag2.current!==1) {scheckbag2(vcheckbag2.current-1);}
+      if (bagitem[vcheckbag.current]==="劇本" && vcheckbag2.current!==1) {scheckbag2(vcheckbag2.current-1);}
+      if (bagitem[vcheckbag.current]==="EGM會議紀錄" && vcheckbag2.current!==1) {scheckbag2(vcheckbag2.current-1);}
+      if (bagitem[vcheckbag.current]==="文件截圖" && vcheckbag2.current!==1) {scheckbag2(vcheckbag2.current-1);}
+    }
+    if (e.key==="m" && vframe.current>=1) {
+      if (vtodisctext.current==="⠀" && vcpath.current!==2) {
+        const temp=[[...visited[0]],[...visited[1]]];
+        temp[vcpath.current][vframe.current-1]=true;
+        svisited(temp);
+        localStorage.setItem('visited',JSON.stringify(temp));
+      }
+      vtodisctext.current=""; sframe(-1); scprog(0); vcprog.current=0; vcpath.current=0; sspeaking(""); sdisctext(""); sshowprogbut(false); noclickf();
+    }
+    if (e.key==="b") {
+      if (vcheckbag.current<=0) {scheckbag(1); vcheckbag.current=1; noclickf(520);}
+      else if (vcheckbag.current===1) {sqnpc(false); scheckbag(-1); vcheckbag.current=-1; noclickf(520);}
+      else if (vcheckbag.current>=1) {scheckbag(1); vcheckbag.current=1;}
+    }
+    if (vcheckbag.current===1) {
+      if (e.key==="1") {bagbutton(2);}
+      if (e.key==="2") {bagbutton(3);}
+      if (e.key==="3") {bagbutton(4);}
+      if (e.key==="4") {bagbutton(5);}
+      if (e.key==="5") {bagbutton(6);}
+      if (e.key==="6") {bagbutton(7);}
+      if (e.key==="7") {bagbutton(8);}
+      if (e.key==="8") {bagbutton(9);}
+    }
+    if (vframe.current===-1) {
+      if (e.key==="u") {sframe(1); startingchat();}
+      if (e.key==="p") {sframe(2); startingchat();}
+      if (e.key==="z") {sframe(3); startingchat();}
+      if (e.key==="a") {sframe(4); startingchat();}
+      if (e.key==="l") {sframe(5); startingchat();}
+    }
+    if (e.key==="i" && vtodisctext.current==="今日Stack Undarflow 嘅組媽就係 @epsithafung_0818嘅Epsitha.") {
+      window.open("https://www.instagram.com/epsithafung_0818/");
+    }
+    if (e.key==="i" && vtodisctext.current==="咁Stack Undarflow 嘅組媽就係 @mandyfung_0818嘅Mandy啦...") {
+      window.open("https://www.instagram.com/mandyfung_0818/");
+    }
+    console.log(e.key);
+  }
 
   useEffect(() => {
     vcprog.current=cprog;
@@ -506,7 +601,7 @@ function App() {
       <h1 className="header-left">U記 - Phase 1.0 之迷</h1>
       <div className="header-right"><h1>⠀UCM系列</h1></div>
       <button className="mutebutton" style={{"backgroundImage":"url(./img/"+(muted ? "soundoff" : "soundon")+".gif)"}} onClick={() => {
-        if (muted) {bgmm.current.play(); smuted(false);} else {bgmm.current.pause(); smuted(true);}
+        if (vmuted.current) {bgmm.current.play(); smuted(false); vmuted.current=false} else {bgmm.current.pause(); smuted(true); vmuted.current=true;}
       }}></button>
       <div style={{clear: "both"}}></div>
       </div>
@@ -539,12 +634,12 @@ function App() {
                   </tr>
                 </tbody>
               </table>
-              <button className="startbutton" onClick={() => {sqnpc(false); scheckbag(-1); noclickf(520);}}>返回</button>
+              <button className="startbutton" onClick={() => {sqnpc(false); scheckbag(-1); vcheckbag.current=-1; noclickf(520);}}>返回</button>
             </div>
             <div style={{"display":(checkbag>1 ? "" : "none")}}>
               <div id="startdes">{bagitem[checkbag]}</div>
               {returnbagitem(bagitem[checkbag])}
-              <button className="startbutton" onClick={() => {scheckbag(1);}}>返回</button>
+              <button className="startbutton" onClick={() => {scheckbag(1); vcheckbag.current=1;}}>返回</button>
             </div>
           </div>
         </div>
@@ -552,7 +647,7 @@ function App() {
       <FadeInOut show={frame===-1} duration={1000}>
       <div className="frame">
         <button id="map" style={{"backgroundImage":"url(./img/map.png)"}}></button>
-        <button className="genbutton" style={{"top":"min(35vw,70vh)", "right":"min(2.5vw,5vh)"}} onClick={() => {scheckbag(1); noclickf(520);}}>查看背包</button>
+        <button className="genbutton" style={{"top":"min(35vw,70vh)", "right":"min(2.5vw,5vh)"}} onClick={() => {scheckbag(1); vcheckbag.current=1; noclickf(520);}}>查看背包</button>
         <button className="ppbut" style={{"top":"min(5vw,10vh)", "right":"min(37.5vw,75vh)", "backgroundImage":"url(./img/u.png)"}} onMouseEnter={() => {smapinfoppl("(同呀U傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(1); startingchat();}}></button>
         <button className="ppbut" style={{"top":"min(30vw,60vh)", "right":"min(59.5vw,119vh)", "backgroundImage":"url(./img/p.png)"}} onMouseEnter={() => {smapinfoppl("(同呀P傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(2); startingchat();}}></button>
         <button className="ppbut" style={{"top":"min(23vw,46vh)", "right":"min(73vw,146vh)", "backgroundImage":"url(./img/z.png)"}} onMouseEnter={() => {smapinfoppl("(同呀Z傾計)")}} onMouseLeave={() => {smapinfoppl("")}} onClick={() => {sframe(3); startingchat();}}></button>
@@ -568,6 +663,8 @@ function App() {
       <FadeInOut show={frame>=1} duration={1000}>
       <div className="frame">
         {vtodisctext.current==="*呀P show咗幾幅相畀你睇..." ? <img style={{"position":"absolute", "left":"min(18vw,36vh)", "width":"min(45vw,90vh)"}} src={"./img/ppic.png"} alt="" /> : <></>}
+        {vtodisctext.current==="*呀Z畀咗條片你哋睇..." ? <iframe title="trailer" id="showvid" src="https://youtube.com/embed/6SrR5p6ZJWc"></iframe> : <></>}
+        {vtodisctext.current==="組媽, 我哋多謝妳... 多謝妳對組爸嘅愛... 多謝妳幫咗我哋... 我哋會永遠記住妳㗎..." ? <iframe title="trailer" id="showvid" src="https://www.youtube.com/embed/Xpy6ApYKpVo?si=GXltWfHsc4JKYts8"></iframe> : <></>}
         <button className="genbutton" style={{"top":"min(29vw,58vh)", "right":"min(11vw,22vh)"}} onClick={() => {
           if (vtodisctext.current==="⠀" && vcpath.current!==2) {
             const temp=[[...visited[0]],[...visited[1]]];
@@ -577,7 +674,7 @@ function App() {
           }
           vtodisctext.current=""; sframe(-1); scprog(0); vcprog.current=0; vcpath.current=0; sspeaking(""); sdisctext(""); sshowprogbut(false); noclickf();
           }}>{"<"}返回地圖</button>
-        <button className="genbutton" style={{"top":"min(29vw,58vh)", "right":"0vh"}} onClick={() => {scheckbag(1); noclickf(520);}}>查看背包</button>
+        <button className="genbutton" style={{"top":"min(29vw,58vh)", "right":"0vh"}} onClick={() => {scheckbag(1); vcheckbag.current=1; noclickf(520);}}>查看背包</button>
         <div className="circle" style={{"top":"min(25vw,50vh)", "left":"min(2.5vw,5vh)", "width":"min(15vw,30vh)", "height":"min(15vw,30vh)", "backgroundImage":"url(./img/"+["blankppl","u","p","z","a","l"][Math.max(0,frame)]+".png)"}}></div>
         <div className="tbub">
           {frame>0 ? (vtodisctext.current==="⠀" ? "" : speaking)+disctext : ""}
@@ -585,12 +682,12 @@ function App() {
            vtodisctext.current!=="咦, 你過嚟搵我做咩呀?" ? <>
            <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {progchat();}}> {">"} </button>
            {vcpath.current!==2 && visited[vcpath.current][frame-1] ? <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(4.5vw,9vh)", "width":"min(2.5vw,5vh)"}} onClick={() => {progchat(-1);}}> {"<"} </button> : <></>}
-           {vframe.current===1 && vcpath.current===0 && vcprog.current===12 ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(7.5vw,15vh)"}}> 查看IG </button></a> : <></>}
-           {vframe.current===3 && vcpath.current===0 && vcprog.current===6 ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(7.5vw,15vh)"}}> 查看IG </button></a> : <></>}
+           {vtodisctext.current==="今日Stack Undarflow 嘅組媽就係 @epsithafung_0818嘅Epsitha." ? <a href="https://www.instagram.com/epsithafung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(7.5vw,15vh)"}}> 查看IG </button></a> : <></>}
+           {vtodisctext.current==="咁Stack Undarflow 嘅組媽就係 @mandyfung_0818嘅Mandy啦..." ? <a href="https://www.instagram.com/mandyfung_0818/" target="_blank" rel="noreferrer"><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(7.5vw,15vh)"}}> 查看IG </button></a> : <></>}
            </>
           : visited[0][frame-1] ? 
           <><button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(22.5vw,45vh)", "width":"min(25vw,50vh)"}} onClick={() => {vcpath.current=0; progchat();}}>我想探問Stack Undarflow嘅真相!</button>
-          <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(20vw,40vh)"}} onClick={() => {sqnpc(true); scheckbag(1);}}>關於呢樣嘢, 我想問多少少...</button></>
+          <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(20vw,40vh)"}} onClick={() => {sqnpc(true); scheckbag(1); vcheckbag.current=1;}}>關於呢樣嘢, 我想問多少少...</button></>
           : <button className="genbutton" style={{"bottom":"min(0.75vw,1.5vh)", "right":"min(1.5vw,3vh)", "width":"min(25vw,50vh)"}} onClick={() => {vcpath.current=0; progchat();}}>我想探問Stack Undarflow嘅真相!</button>}
         </div>
       </div>

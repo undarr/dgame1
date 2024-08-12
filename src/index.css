@@ -195,6 +195,17 @@ button:focus {
   border-width: 0.4vh;
 }
 
+#showvid {
+  top: min(6vw,12vh);
+  left: min(18vw,36vh);
+  width: min(48vw,96vh);
+  height: min(24vw,48vh);
+  position: absolute;
+  border: #000;
+  border-style: solid;
+  border-width: 0.4vh;
+}
+
 .fullop {
   opacity: 1;
 }
